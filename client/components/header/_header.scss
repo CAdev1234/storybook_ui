@@ -1,0 +1,858 @@
+@import "../../styles/_mixins.scss";
+
+$headerColor: #5e2750;
+$interactive-2-hover: #35152c;
+$interactive-2-active: #471d3c;
+
+.main-header {
+    height: 80px;
+    display: block;
+    background-color: $headerColor;
+
+    .header-row {
+        width: 100%;
+
+        .header-item {
+            display: inline-block;
+            position: relative;
+        }
+
+        .logo {
+            padding-left: 24px;
+            top: 18px;
+
+            img {
+                height: 41px;
+                vertical-align: inherit;
+            }
+        }
+
+        .profile {
+            position: absolute;
+            height: 80px;
+            right: 0;
+            width: 100%;
+
+            .profile-wrapper {
+                display: none;
+            }
+        }
+
+        .menus.header-item {
+            z-index: 100;
+
+            .above-mobile {
+                display: none;
+            }
+
+            .accordion {
+                display: block;
+            }
+
+            .menu-item {
+                display: none;
+            }
+        }
+
+        .menu-icon-container {
+            position: absolute;
+            top: 26px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+
+            button.menu-icon {
+                border: none;
+                background-color: transparent;
+                width: 32px;
+                height: 32px;
+                background-image: url('/content/membership/assets/mobile-menu-medium.svg');
+                background-repeat: no-repeat;
+                -webkit-transition: opacity .3s, transform .3s;
+                -moz-transition: opacity .3s, transform .3s;
+                transition: opacity .3s, transform .3s;
+            }
+
+            &.open {
+                button.menu-icon {
+                    background-image: url('/content/membership/assets/icons-close-small.svg');
+                    background-position-x: right;
+                    background-position-y: center;
+                    -webkit-transition: opacity .3s, transform .3s;
+                    -moz-transition: opacity .3s, transform .3s;
+                    transition: opacity .3s, transform .3s;
+                }
+            }
+        }
+
+        .menus {
+            a {
+                color: $themeColor;
+            }
+
+            position: absolute;
+
+            &.open {
+                display: block;
+                position: absolute;
+                left: 0px;
+                top: 80px;
+                width: 100%;
+
+                .menu-item {
+                    display: block;
+                    border: none;
+
+                    .accordion__link {
+                        color: white;
+                        padding-left: 20px;
+
+                        &::after {
+                            right: 20px;
+                            content: url(/content/membership/assets/icons-chevron-down-small.svg);
+                        }
+                    }
+                }
+
+                .promo {
+                    padding: 17px 20px;
+
+                    .menu-item-row {
+                        width: 100%;
+                        color: white;
+
+                        &.menu-heading {
+
+                            img {
+                                padding-right: 20px;
+                                display: inline-block;
+                            }
+
+                            h3.title {
+                                display: inline-block;
+                                font-size: 32px;
+                                vertical-align: middle;
+                                padding-bottom: 0;
+                            }
+                        }
+
+                        &.content {
+                            padding: 20px 0;
+                        }
+
+
+                        &.link {
+                            text-align: right;
+                            padding-right: 20px;
+
+                            a {
+                                color: white;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                .sub-menu-links {
+                    border-left: 1px solid white;
+                    padding-left: 4px;
+                    padding: 20px;
+
+                    .column-1 {
+                        display: block;
+                    }
+
+                    .column-2 {
+                        display: block;
+                    }
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        width: 100%;
+                        display: block;
+                        padding: 8px 6px;
+
+                        &:hover {
+                            background-color: $interactive-2-hover;
+                        }
+                    }
+                }
+            }
+
+            .mobile.accordion {
+                .menu-item {
+                    .menu-item-header {
+                        background-color: $interactive-2-active;
+
+                        button.account {
+
+                            &::before {
+                                display: inline-block;
+                                content: url('/content/membership/assets/icons-user-small.svg');
+                                top: 1px;
+                                left: 0;
+                                width: 20px;
+                                height: 20px;
+                                padding-right: 4px;
+                            }
+                        }
+                    }
+
+                    .menu-item-content {
+                        background-color: $interactive-2-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.country-select-wrapper {
+    position: relative;
+    user-select: none;
+
+    .country-select {
+        position: relative;
+
+        .country-select__trigger {
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 4px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #3b3b3b;
+            cursor: pointer;
+
+            .flag {
+                padding-bottom: 4px;
+                border-bottom: 2px solid $headerColor;
+                width: 32px;
+                position: absolute;
+                right: 24px;
+                top: 24px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        .country-options {
+            position: absolute;
+            display: block;
+            top: 80px;
+            left: 0;
+            right: 0;
+            transition: all 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            z-index: 2;
+
+            .country-option {
+                white-space: nowrap;
+                position: relative;
+                display: block;
+                padding: 10px 24px;
+                cursor: pointer;
+                transition: all 0.5s;
+                background-color: $interactive-2-hover;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $interactive-2-active;
+                }
+
+                &.selected {
+                    color: #ffffff;
+                    background-color: $interactive-2-active;
+                    img {
+                        opacity: 1.0;
+                    }
+                }
+
+                span {
+                    font-size: 20px;
+                    font-weight: 300;
+                    color: $white;
+                }
+
+                img {
+                    float: right;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &.open {
+            .country-select__trigger {
+
+                .flag {
+                    border-bottom: 2px solid white;
+                }
+            }
+
+            .country-options {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}
+
+@include respond-above(xs) {
+
+    .main-header {
+
+        .header-row {
+
+            .header-item {
+            }
+
+            .logo {
+
+                img {
+                }
+            }
+
+            .menus {
+            }
+
+            .profile {
+
+                .profile-wrapper {
+
+                }
+            }            
+        }
+
+        
+    }
+
+    .country-select-wrapper {
+        .country-select {
+
+            &.open {
+                .country-options {
+                    top: 80px;
+                }
+            }
+
+            .country-select__trigger {
+
+                .flag {
+                }
+            }
+        }
+    }
+}
+@include respond-above(sm) {
+
+    .main-header {
+        height: 96px;
+
+        .header-row {
+
+            .logo {
+                height: 64px;
+                padding-left: 48px;
+
+                img {
+                    height: 64px;
+                }
+            }
+
+            .menus.header-item {
+                display: block;
+                position: absolute;
+                top: 95px;
+                left: 0;
+                width: 100%;
+
+                .above-mobile {
+                    display: none;
+                    width: 100%;
+                    background-color: $interactive-2-hover;
+
+                    .menu-item-headers {
+                        display: flex;
+                        height: 96px;
+                        padding: 0 48px 0 48px;
+
+                        .menu-item-title {
+                            display: block;
+
+                            &:hover {
+                                h3 {
+                                    display: inline-block;
+
+                                    .indicator {
+                                        display: block;
+                                        height: 2px;
+                                        border-bottom: 1px solid white;
+                                        width: 60%;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                h3 {
+                                    display: inline-block;
+
+                                    .indicator {
+                                        display: block;
+                                        height: 2px;
+                                        border-bottom: 2px solid white;
+                                        width: 60%;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+
+                            flex: 1;
+                            padding-top: 34px;
+                            color: $white;
+
+                            h3 {
+                                text-align: left;
+                                white-space: nowrap;
+                                font-weight: 300;
+                                line-height: 28px;
+                                font-size: 20px;
+                            }
+
+                            &.account {
+
+                                h3::before {
+                                    content: url('/content/membership/assets/icons-user-small.svg');
+                                    position: relative;
+                                    top: 2px;
+                                    left: 0;
+                                    width: 20px;
+                                    height: 20px;
+                                    padding-right: 4px;
+                                }
+                            }
+                        }
+                    }
+
+                    .menu-item-contents {
+                        display: block;
+                        padding: 0 48px 48px 48px;
+
+                        .menu-item-content {
+                            display: none;
+
+                            &.active {
+                                display: block;
+                            }
+
+                            .promo {
+                                width: 50%;
+
+                                .menu-heading {
+                                    padding-top: 0;
+
+                                    img {
+                                        padding: 0;
+                                    }
+                                }
+
+                                .content {
+                                    padding: 20px 0;
+                                }
+
+                                .link {
+                                    padding: 0;
+                                }
+                            }
+                        }
+
+                        .sub-menu-links {
+                            margin: 36px 0 0 0;
+                            border: none;
+                            a {
+                                &:hover {
+                                    background-color: $interactive-2-active;
+                                }
+                            }
+                            
+
+                            .column-1 {
+                                width: calc(50% - 6px);
+                                display: inline-block;
+                                border-left: 1px solid $border-3;
+                                vertical-align: top;
+                            }
+
+                            .column-2 {
+                                width: calc(50% - 6px);
+                                display: inline-block;
+                                border-left: 1px solid $border-3;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                }
+
+                &.open {
+                    .above-mobile {
+                        display: block;
+                    }
+                }
+
+
+                .accordion.mobile {
+                    display: none;
+                }
+            }
+
+            .menu-icon-container {
+                top: 32px;
+                right: 48px;
+
+                &.open {
+                    right: 54px;
+                }
+            }
+
+            .profile {
+                width: 330px;
+                right: 0px;
+
+                .profile-wrapper {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .country-select-wrapper {
+        .country-select {
+
+            &.open {
+                .country-options {
+                    top: 80px;
+                }
+            }
+
+            .country-select__trigger {
+
+                .flag {
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(md) {
+    .main-header {
+
+        .header-row {
+            .logo {
+                padding-left: 96px;
+                z-index: 101;
+            }
+
+            .header-item {
+                display: inline-block;
+
+                &.menus {
+                    display: none;
+                }
+            }
+
+            .menus.header-item {
+                display: block;
+                position: absolute;
+                top: 96px;
+                left: 0;
+            }
+
+            .menu-icon-container {
+                right: 96px;
+
+                &.open {
+                    right: 98px;
+                }
+            }
+
+            .country-select-wrapper {
+
+                .country-select {
+                    .country-options {
+                        left: -24px;
+                        width: 330px;
+                    }
+
+                    &.open {
+                        .country-options {
+                            top: 95px;
+                        }
+                    }
+
+                    .country-select__trigger {
+
+                        .flag {
+                            right: 48px;
+                            top: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include respond-above(lg) {
+    .main-header {
+
+        .header-row {
+            .logo {
+                padding-left: 160px;
+                z-index: 101;
+            }
+
+            .country-select-wrapper {
+
+                .country-select {
+                    .country-options {
+                        left: -136px;
+                    }
+
+                    .country-select__trigger {
+
+                        .flag {
+                            right: 160px;
+                        }
+                    }
+                }
+            }
+
+            .menus.header-item {
+                top: 0;
+                left: 0;
+                position: absolute;
+
+                .above-mobile {
+                    display: block;
+                    width: 100%;
+
+                    .menu-item-headers {
+                        display: flex;
+                        height: 96px;
+                        padding: 0 160px 0 460px;
+                        background-color: $headerColor;
+
+                        .menu-item-title {
+                            display: block;
+                            flex: 1;
+                            padding-top: 40px;
+                            color: $white;
+                            text-align: center;
+
+                            h3 {
+                                white-space: nowrap;
+                                display: inline-block;
+                                font-weight: 300;
+                                line-height: 28px;
+                                font-size: 20px;
+
+                                .indicator, .down-arrow {
+                                    display: none;
+                                }
+                            }
+
+                            &.active {
+
+                                h3 {
+                                    .indicator, .down-arrow {
+                                        display: none;
+                                    }
+                                }
+
+                                &:hover {
+                                    h3 {
+                                        display: inline-block;
+
+                                        .indicator {
+                                            display: block;
+                                            height: 2px;
+                                            border-bottom: 1px solid white;
+                                            width: 60%;
+                                            margin: 0 auto;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.active.selected {
+
+                                .indicator {
+                                    display: block;
+                                    height: 2px;
+                                    border-bottom: 2px solid white;
+                                    width: 60%;
+                                    margin: 0 auto;
+                                    padding-top: 4px;
+                                }
+
+                                .down-arrow {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 18px;
+                                    height: 18px;
+                                    left: calc(50% - 9px);
+                                    top: 10px;
+                                    transform: rotate(45deg);
+                                    background-color: $headerColor;
+                                    z-index: 100;
+                                }
+
+                                &:hover {
+                                    h3 {
+                                        .indicator {
+                                            border-bottom: 2px solid white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.account {
+
+                                h3::before {
+                                    display: inline-block;
+                                    content: url('/content/membership/assets/icons-user-small.svg');
+                                    position: relative;
+                                    top: 2px;
+                                    left: 0;
+                                    width: 20px;
+                                    height: 20px;
+                                    padding-right: 4px;
+                                }
+                            }
+                        }
+                    }
+
+                    .menu-item-contents {
+                        padding: 0 160px;
+                        position: absolute;
+                        top: 96px;
+                        left: 0;
+                        width: 100%;
+                        background-color: $interactive-2-hover;
+                        z-index: 10;
+
+                        .menu-item-content {
+                            padding-top: 24px;
+
+                            &.active {
+                                display: none;
+
+                                &.selected {
+                                    display: block;
+                                    padding-bottom: 24px;
+                                }
+                            }
+
+                            .promo {
+                                width: 35%;
+                                display: inline-table;
+                                padding-right: 24px;
+                                padding-left: 24px;
+                                border-left: 1px solid $border-3;
+
+                                .menu-item-row {
+                                    width: 100%;
+                                    color: white;
+
+                                    &.menu-heading {
+                                        padding-top: 0;
+
+                                        img {
+                                            padding-right: 20px;
+                                            display: inline-block;
+                                        }
+
+                                        h3.title {
+                                            display: inline-block;
+                                            font-size: 32px;
+                                            vertical-align: middle;
+                                        }
+                                    }
+
+                                    &.content {
+                                        padding: 20px 0;
+                                    }
+
+                                    &.link {
+                                        text-align: right;
+                                        padding-right: 20px;
+
+                                        a {
+                                            color: white;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .sub-menu-links {
+                                width: 64%;
+                                border: none;
+                                display: inline-table;
+                                vertical-align: top;
+                                margin: 0;
+                                padding: 0;
+
+                                .column-1 {
+                                    padding: 0 4px 0 0;
+                                    display: table-cell;
+                                    border-left: 1px solid $border-3;
+                                    vertical-align: top;
+                                }
+
+                                .column-2 {
+                                    padding: 0;
+                                    display: table-cell;
+                                    border-left: 1px solid $border-3;
+                                    vertical-align: top;
+                                }
+                            }
+
+                            a {
+                                color: white;
+                                text-decoration: none;
+                                width: 100%;
+                                display: block;
+                                padding: 10px 6px 10px 15px;
+
+                                &:hover {
+                                    background-color: $interactive-2-active;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                a.menu-item-title {
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .menu-icon-container {
+                display: none;
+            }
+        }
+    }
+}

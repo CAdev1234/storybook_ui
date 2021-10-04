@@ -1,0 +1,29 @@
+﻿<main class="cert-details">
+    <div class="cert-details-wrapper">
+        <form class="cert-details-form" action="api/cert-details-form" method="post">
+            <div class="info">
+                <div class="heading-1">Access your certificate detials</div>
+                <div class="body-1">
+                    Before providing access to this secure area, we just need to confirm it’s really you. 
+                    <b>Please note:</b> you may need to turn off your popup blocker to view certificate details.
+                </div>
+            </div>
+
+            <div class="item-row cert">
+                <!--d-none-->
+                <div class="item-wrapper">
+                    <label class="label-1">
+                        Please enter the last 4 digits of your Social Security number
+                        <input type="password" class="input-field" pattern="^([0-9]{4})$" required />
+                        <span class="error">Error: you have entered invalid digits</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="item-row action submit">
+                <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                <button type="submit" class="button-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</main>

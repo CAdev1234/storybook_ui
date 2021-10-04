@@ -1,0 +1,22 @@
+@import "../styles/_mixins.scss";
+
+.date-time-table {
+}
+
+@include respond-above(xs) {
+    .date-time-table {
+    }
+}
+
+@include respond-above(sm) {
+    .date-time-table {
+    }
+}
+
+@include respond-above(md) {
+    .date-time-table {
+    }
+}
+
+@include respond-above(lg) {
+}

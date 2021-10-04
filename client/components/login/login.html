@@ -1,0 +1,82 @@
+﻿<div class="login" style="background-image: url('/content/membership/assets/group-5.png');">
+    <!--this part is for error dialog-->
+    <div class="modal-error">
+        <!--adding no-error style will hide this error section, class="modal-error no-error"-->
+        <div class="backdrop"></div>
+        <div class="error-content">
+            <div class="icon-close"><button class="btn-close"></button></div>
+            <div class="title content"><img src="/content/membership/assets/warning.svg" /><p>Sign in Error</p></div>
+            <div class="instr content">Please contact support at 18005634557</div>
+            <a href="#" class="contact-link content"><div class="contact">Contact Support</div></a>
+        </div>
+    </div>
+    <div class="login-wrapper">
+        <div class="login-form-container">
+            <form class="login-form" action="api/login" method="post">
+                <div class="title">Sign In to MyForesters</div>
+                <div class="wrapper">
+                    <div class="item-row error-wrapper">
+                        <!--adding no-error style will hide this error section-->
+                        <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Login Error</span></div>
+                        <div class="error-message">The username or password you entered seems to be incorrect. Please try again.</div>
+                    </div>
+                    <div class="item-row">
+                        <label for="uname" class="text-500">Username</label>
+                        <input type="text" placeholder="john smith" id="uname" name="uname" required>
+                    </div>
+                    <div class="item-row">
+                        <label for="psw" class="text-500">Password</label>
+                        <input type="password" id="loginpassword" placeholder="Enter Password" name="psw" required>
+                        <div class="toggle-pwd">
+                            <span id="show" class="show">Show</span>
+                            <span id="hide" class="hide">Hide</span>
+                        </div>
+                        <span id="password" class="caps-lock-message">WARNING! Caps lock is ON.</span>
+                    </div>
+                    <div class="item-row">
+                        <label class="check-container">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                            <span class="text">Remember me</span>
+                        </label>
+                    </div>
+                    <div class="item-row">
+                        <button type="submit" class="button-primary">Sign in</button>
+                    </div>                   
+                    <div class="item-row">
+                        <a class="link text-500" href="#"><span>Forgot Username or Password?</span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="signup-info wrapper">
+            <div class="title item-row">First Time Sign In?</div>
+            <div class="sub-title item-row">Register today for easy access to your member benefits:</div>
+            <div class="items">
+                <div class="item">
+                    <div class="check"></div>
+                    <p><strong>NEW!</strong>LawAssure online document preparation service</p>
+                </div>
+                <div class="item">
+                    <div class="check"></div>
+                    <p>Local volunteer opportunities</p>
+                </div>
+                <div class="item">
+                    <div class="check"></div>
+                    <p>Competitive scholarships</p>
+                </div>
+                <div class="item">
+                    <div class="check"></div>
+                    <p>Community grants of up to $2,000</p>
+                </div>
+            </div>
+            <div class="register">
+                <a class="link text-500" href="#"><span>Register Now</span></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="back-cover">
+
+</div>

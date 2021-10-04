@@ -1,0 +1,103 @@
+@import "../../styles/_mixins.scss";
+
+
+.cert-details {
+    display: block;
+    background-color: white;
+
+    .cert-details-wrapper {
+        padding: 48px 20px;
+
+        .cert-details-form {
+            .item-row {
+                padding: 16px 0;
+
+                .item-wrapper {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    .label-1 {
+                        display: block;
+                    }
+
+                    .input-field {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .info {
+
+                .heading-1 {
+                    padding-bottom: 16px;
+                }
+
+                .body-1 {
+                    padding-bottom: 16px;
+                }
+            }
+
+            .action {
+
+                .button-primary {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(xs) {
+    .cert-details {
+
+        .cert-details-wrapper {
+            width: 596px;
+            margin: 0 auto;
+
+            .cert-details-form {
+                .item-row {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+
+                .info {
+                    padding-bottom: 16px;
+                }
+
+                .item-row {
+                    padding: 16px 0;
+
+                    .item-wrapper {
+                        display: inline-block;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        width: 100%;
+
+                        .input-field {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .action {
+
+                    &.submit {
+                        margin: 0 auto;
+                        width: 168px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+    

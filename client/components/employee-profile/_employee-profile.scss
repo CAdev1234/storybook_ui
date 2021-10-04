@@ -1,0 +1,40 @@
+@import "../styles/_mixins.scss";
+
+.profile-container {
+    .profile-form {
+        &.foresters-go-form, &.membership-access-form {
+            background: none;
+            border: none;
+            padding-left: 0;
+            padding-top: 0;
+            .item-row {
+
+                button[type="submit"] {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+@include respond-above(xs) {
+
+}
+
+@include respond-above(sm) {
+    .profile-container {
+
+    }
+}
+
+@include respond-above(md) {
+    .profile-container {
+
+    }
+}
+
+@include respond-above(lg) {
+    .profile-container {
+
+    }
+}
+

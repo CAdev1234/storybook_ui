@@ -1,0 +1,72 @@
+﻿<div class="hero hero-theme-profile">
+    <div class="content">
+        <div class="title heading-1" data-username="Nas">
+            Hi, {{username}}!
+        </div>
+        <div class="desc text-1">
+            My Profile is where you can make changes to your account profile settings. Update any of the editable sections below by clicking “change” and filling in the appropriate form fields when prompted. Address change and Contact Information changes are not available here. Please contact Service Centre for these changes.
+        </div>
+        <div class="ctas">
+        </div>
+    </div>
+</div>
+<div class="full-width-container container-dark-light border-bottom">    
+    <div id="login_info" class="profile-container">
+                    <h2>Login Information</h2>
+                    <div class="info-row">
+                        <label class="label-1">Username: <span class="item_value">Nas</span></label>
+                    </div>
+                    <div class="info-row">
+                        <label class="label-1">Password:<button id="change_passwd" type="button" class="link"><span class="item_value">change password</span></button></label>
+                    </div>
+                    <div class="info-instr">
+                        <div class="body-1">Please enter your new password below.</div>
+                    </div>
+                    <!--TODO action url needs to be updated-->
+                    <form id="change_passwd_form" class="profile-form" action="api/changePassword" method="post">
+                        <div class="info">
+                            <div class="heading-2">Change Password</div>
+                        </div>
+                        <div class="item-row error-wrapper">
+                            <!--adding no-error style will hide this error section-->
+                            <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                            <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-wrapper">
+                                <label class="label-1">
+                                    <span class="text-2">Password</span>
+                                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}" placeholder="Enter Password" class="input-field" id="password" required />
+                                    <span class="toggle-pwd">
+                                        <span id="show" class="show">Show</span>
+                                        <span id="hide" class="hide">Hide</span>
+                                    </span>
+                                    <span class="error">Please enter your password</span>
+                                </label>
+                                <div class="caption-text">8 - 14 characters, including at least one letter and one number. </div>
+                            </div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-wrapper">
+                                <label class="label-1">
+                                    <span class="text-2">Confirm Password</span>
+                                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}" placeholder="Confirm Password" class="input-field" id="confirmPassword" required />
+                                    <span class="toggle-pwd">
+                                        <span id="show" class="show">Show</span>
+                                        <span id="hide" class="hide">Hide</span>
+                                    </span>
+                                    <span class="error">Please enter your confirm password</span>
+                                </label>
+                                <div class="caption-text">Both passwords must match</div>
+                            </div>
+                        </div>
+                        <div class="item-row action submit">
+                            <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                            <button type="submit" class="button-primary">Submit</button>
+                        </div>
+                        <div class="item-row action cancel">
+                            <button type="button" class="cta-text link"><span>Cancel</span></button>
+                        </div>
+                    </form>
+                </div>            
+</div>

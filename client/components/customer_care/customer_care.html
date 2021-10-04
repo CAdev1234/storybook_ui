@@ -1,0 +1,130 @@
+﻿<div class="full-width-container container-theme-dark">
+    <div class="hero hero-theme-full-text-width hero-theme-profile">
+        <div class="title heading-1">
+            Customer care and resources
+        </div>
+        <div class="desc text-1">
+            Foresters Financial™ is dedicated to providing our members with fast and friendly service. 
+            Whether you want to learn more about your unique member benefits or need help choosing the right insurance product, we are happy to help.
+        </div>
+    </div>
+</div>
+<div class="full-width-container  container-theme-light">
+    <!--tab component-->
+    <div class="tabs-container">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <!--Note: href hash link needs to match the tab content item id, such as self_service_content and faqs_content-->
+                <a class="nav-link active tab-title" id="self_service_link" data-toggle="tab" href="#self_service_content" role="tab" aria-controls="self_service_content" aria-selected="true">Self service forms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link tab-title" id="faqs_link" data-toggle="tab" href="#faqs_content" role="tab" aria-controls="faqs_content" aria-selected="false">FAQs</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <!--Note: the id of each tab content needs to match the href in the tab header-->
+            <div class="tab-pane fade show active" id="self_service_content" role="tabpanel" aria-labelledby="self_service_link">
+                <!--formn list component, this is not part of tab component-->
+                <div class="form-list-title body-1-bold">
+                    For your convenience, some of our most frequently used forms are available to download.
+                </div>
+                <div class="form-list accordion" id="service_forms">
+                    <div class="card">
+                        <div id="self_service_content_heading1">
+                            <div class="accordion__link mb-0">
+                                How do I get involved as a volunteer with Foresters?
+                            </div>
+                            <a href="#" class="download"></a>
+                        </div>
+                        <div id="self_service_content_collapse1" class="collapse show" aria-labelledby="self_service_content_heading1">
+                            <div class="card-body">
+                                Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam.
+                                Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim.
+                                <span class="read-more-container"><!--this ection needs to be dynamically controlled based on the content-->
+                                    <a href="#" class="read-more active">Read More</a>
+                                    <span class="read-more-content"> Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat.</span>
+                                    <a href="#" class="read-less">Read Less</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bottom-collapse"></div>
+                    </div>
+                    <div class="card">
+                        <div id="self_service_content_heading2">
+                            <div class="accordion__link mb-0">
+                                Where can I find events in my area?
+                            </div>
+                            <a href="#" class="download"></a>
+                        </div>
+                        <div id="self_service_content_collapse2" class="collapse show" aria-labelledby="self_service_content_heading2">
+                            <div class="card-body">
+                                Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat.
+                                Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit.
+                            </div>
+                        </div>
+                        <div class="bottom-collapse"></div>
+                    </div>
+                    <div class="card">
+                        <div id="self_service_content_heading3">
+                            <div class="accordion__link">
+                                Why can't I find an event in my area?
+                            </div>
+                            <a href="#" class="download"></a>
+                        </div>
+                        <div id="self_service_content_collapse3" class="collapse show" aria-labelledby="self_service_content_heading3">
+                            <div class="card-body">
+                                Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                            </div>
+                        </div>
+                        <div class="bottom-collapse"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="faqs_content" role="tabpanel" aria-labelledby="faqs_link">
+                <!--accordion-->
+                <div class="accordion" id="faqs">
+                    <div class="card">
+                        <!--div id heading1 is used to linke heading and content using bootstrap js. This id can be arbitrary -->
+                        <div id="faqs_content_heading1">
+                            <button class="accordion__link mb-0 collapsed" type="button" data-toggle="collapse" data-target="#faqs_content_column1" aria-expanded="false" aria-controls="faqs_content_column1">
+                                How do I get involved as a volunteer with Foresters?
+                            </button>
+                        </div>
+                        <!--div id column1 are used to link heading with contents for screen readers (accessibility). This id can be arbitrary-->
+                        <div id="faqs_content_column1" class="collapse" aria-labelledby="faqs_content_heading1" data-parent="#faqs">
+                            <div class="card-body">
+                                Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam.
+                                Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div id="faqs_content_heading2">
+                            <button class="accordion__link mb-0 collapsed" type="button" data-toggle="collapse" data-target="#faqs_content_collapse2" aria-expanded="false" aria-controls="faqs_content_collapse2">
+                                Where can I find events in my area?
+                            </button>
+                        </div>
+                        <div id="faqs_content_collapse2" class="collapse" aria-labelledby="faqs_content_heading2" data-parent="#faqs">
+                            <div class="card-body">
+                                Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat.
+                                Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div id="faqs_content_heading3">
+                            <button class="accordion__link collapsed" type="button" data-toggle="collapse" data-target="#faqs_content_collapse3" aria-expanded="false" aria-controls="faqs_content_collapse3">
+                                Why can't I find an event in my area?
+                            </button>
+                        </div>
+                        <div id="faqs_content_collapse3" class="collapse" aria-labelledby="faqs_content_heading3" data-parent="#faqs">
+                            <div class="card-body">
+                                Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{
+  "projects": ["5f5a33145d1cd974d3c4a9cd"],
+  "styleguides": ["5f5a32d593bf12519e00a7e4"],
+  "components": [
+    {
+      "path": "client/components/header/header.js",
+      "zeplinIds": [
+        "5f6b6a0771a58347d383a1dd",
+        "5f6b6a0784923d44bc72b1d8",
+        "5f9c2d58cdf9508ca31eb270"
+      ]
+    },
+    {
+      "path": ".storybook/InputFields/InputFields.js",
+      "zeplinIds": [
+        "5f6b676801891f2dd24cab73",
+        "5f6b6768d65a054728b12fc1",
+        "5f6b67686ba2994d16f91090",
+        "5f6b6768cc3f74841be1a19b",
+        "5f6b67681a9d29847aa08629",
+        "5f6b676884923d44bc72a61c",
+        "5f6b67681cae2646f2e9efc5",
+        "5f6b676823f333878c82eb7b",
+        "5f6b6768f9de894b784c9ae9",
+        "5f6b6768c279882e7ee50733",
+        "5f6b6768a7ce0534c486b1a4"
+      ]
+    }
+  ],
+  "plugins": []
+}

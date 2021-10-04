@@ -1,0 +1,469 @@
+@import "./_mixins.scss";
+
+.hero {
+    background-size: cover;
+    background-position-x: 63%;
+
+    &.background-position-20 {
+        background-position-x: 20%;
+    }
+
+    &.background-position-30 {
+        background-position-x: 30%;
+    }
+
+    &.background-position-40 {
+        background-position-x: 40%;
+    }
+
+    &.background-position-50 {
+        background-position-x: 50%;
+    }
+
+    &.background-position-60 {
+        background-position-x: 60%;
+    }
+
+    &.background-position-70 {
+        background-position-x: 70%;
+    }
+
+    &.background-position-80 {
+        background-position-x: 80%;
+    }
+
+    &.background-position-90 {
+        background-position-x: 90%;
+    }
+
+    .logo {
+        padding-bottom: 16px;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .title {
+        padding-bottom: 16px;
+        color: white;
+        font-family: 'MuseoSlab-900';
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 1.22;
+    }
+
+    .desc {
+        padding-bottom: 32px;
+        color: white;
+        font-family: 'MuseoSans-500';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.56;
+    }
+
+    &.tier-1 {
+        min-height: 500px;
+
+        .content {
+            min-height: 500px;
+        }
+
+        .title {
+            font-family: 'MuseoSlab-900';
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 1.22;
+        }
+
+        .desc {
+            font-family: 'MuseoSans-500';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.56;
+        }
+    }
+
+    &.tier-2 {
+        .title {
+            font-family: 'MuseoSans-500';
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.29;
+        }
+
+        .desc {
+            font-family: 'MuseoSans-300';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+
+    &.tier-3 {
+        .title {
+            font-family: 'MuseoSans-500';
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.29;
+        }
+
+        .desc {
+            font-family: 'MuseoSans-300';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+
+    .ctas {
+        padding-bottom: 16px;
+
+        .cta {
+            .button-secondary {
+                border: 2px solid white;
+                color: white;
+            }
+
+            padding-bottom: 16px;
+
+            &:first-child {
+                padding-right: 16px;
+            }
+        }
+    }
+
+    .content {
+        padding: 20px 20px 64px 20px;
+    }
+
+    &.hero-theme-light {
+        background-color: white;
+
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(20%) sepia(91%) saturate(2587%) hue-rotate(170deg) brightness(103%) contrast(101%);
+            }
+        }
+
+        .title {
+            color: $text-2;
+        }
+
+        .desc {
+            color: $text-1;
+        }
+
+        .ctas {
+            .button-download {
+                color: $themeColor;
+
+                &::after {
+                    filter: brightness(0) saturate(100%) invert(20%) sepia(91%) saturate(2587%) hue-rotate(170deg) brightness(103%) contrast(101%);
+                }
+
+                &:hover {
+                    color: $hover-back-color;
+                }
+            }
+
+            .cta {
+                a.download::after, button.download::after {
+                    filter: brightness(0) saturate(100%) invert(20%) sepia(91%) saturate(2587%) hue-rotate(170deg) brightness(103%) contrast(101%);
+                }
+            }
+        }
+
+        &.hero-gradient {
+            .content {
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+
+    &.hero-theme-dark {
+        background-color: $background-3;
+
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(21deg) brightness(106%) contrast(105%);
+            }
+        }
+
+        .title {
+            color: white;
+        }
+
+        .desc {
+            color: white;
+        }
+
+        &.hero-gradient {
+            .content {
+                background-color: rgba(37, 37, 37, 0.7);
+            }
+        }
+
+        .ctas {
+            .cta {
+                a.download::after, button.download::after {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(21deg) brightness(106%) contrast(105%);
+                }
+            }
+        }
+    }
+
+    &.hero-theme-teal {
+        background-color: $themeColor;
+
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(21deg) brightness(106%) contrast(105%);
+            }
+        }
+
+        .title, .desc {
+            color: white;
+        }
+    }
+
+    &.hero-theme-profile {
+        background-color: $neutrals-cream;
+
+        .title, .desc {
+            color: $text-1;
+        }
+    }
+
+    &.hero-theme-full-text-width {
+        .title {
+            width: 100%;
+        }
+
+        .desc {
+            width: 100%;
+        }
+    }
+
+    &.logo-plum {
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(14%) sepia(63%) saturate(1229%) hue-rotate(276deg) brightness(98%) contrast(87%);
+            }
+        }
+    }
+
+    &.logo-black {
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(12%) sepia(5%) saturate(0%) hue-rotate(152deg) brightness(97%) contrast(93%);
+            }
+        }
+    }
+
+    &.logo-white {
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(21%) hue-rotate(21deg) brightness(106%) contrast(105%);
+            }
+        }
+    }
+
+    &.logo-teal {
+        .logo {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(20%) sepia(91%) saturate(2587%) hue-rotate(170deg) brightness(103%) contrast(101%);
+            }
+        }
+    }
+}
+
+@include respond-above(xs) {
+    .hero {
+
+        .title {
+            width: 60%;
+        }
+
+        .desc {
+            width: 60%;
+        }
+
+        .ctas {
+            .cta {
+                width: auto;
+                min-width: unset;
+            }
+        }
+    }
+}
+
+@include respond-above(sm) {
+    .hero {
+        background-position-x: unset;
+
+        &.background-position-20,
+        &.background-position-30,
+        &.background-position-40,
+        &.background-position-50,
+        &.background-position-60,
+        &.background-position-70,
+        &.background-position-80,
+        &.background-position-90 {
+            background-position-x: unset;
+        }
+
+        .content {
+            padding: 32px 48px 64px 48px;
+        }
+
+        .logo {
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .title {
+            font-family: 'MuseoSlab-900';
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 1.17;
+        }
+
+        .desc {
+            font-family: 'MuseoSans-500';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.56;
+        }
+
+        &.tier-1 {
+            .title {
+                font-family: 'MuseoSlab-900';
+                font-weight: 900;
+                font-size: 48px;
+                line-height: 1.17;
+            }
+
+            .desc {
+                font-family: 'MuseoSans-500';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1.56;
+            }
+        }
+
+        &.tier-2 {
+            .title {
+                font-family: 'MuseoSans-500';
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 1.25;
+            }
+
+            .desc {
+                font-family: 'MuseoSans-300';
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.5;
+            }
+        }
+
+        &.tier-3 {
+            .title {
+                font-family: 'MuseoSans-500';
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 1.25;
+            }
+
+            .desc {
+                font-family: 'MuseoSans-300';
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.5;
+            }
+        }
+
+        .ctas {
+            .cta {
+                &:not(:first-child) {
+                    padding-left: 16px;
+                }
+            }
+        }
+
+
+        &.hero-theme-light {
+            &.hero-gradient {
+                .content {
+                    background-color: transparent;
+                    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9));
+                }
+            }
+        }
+
+        &.hero-theme-dark {
+            &.hero-gradient {
+                .content {
+                    background-color: transparent;
+                    background-image: linear-gradient(to left, rgba(76, 76, 76, 0.01), rgba(37, 37, 37, 0.94));
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(md) {
+    .hero {
+        .content {
+            padding: 48px 96px 64px 96px;
+        }
+
+        .logo {
+
+            img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+}
+@include respond-above(lg) {
+    .hero {
+        .content {
+            padding: 48px 160px 64px 160px;
+        }
+
+        .logo {
+
+            img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+}
+
+@include respond-above(xl) {
+    .hero {
+        &.tier-1 {
+            min-height: 25vw;
+            background-position-y: 60%;
+
+            .content {
+                min-height: 25vw;
+            }
+        }
+    }
+}

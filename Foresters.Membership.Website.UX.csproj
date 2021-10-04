@@ -1,0 +1,489 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{073D116C-CF31-4877-A4E9-B8C3BFD982B7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Foresters.Membership.Website.UX</RootNamespace>
+    <AssemblyName>Foresters.Membership.Website.UX</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44376</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="client\assets\img\48-h%402x.png" />
+    <Content Include="client\assets\img\48-h%403x.png" />
+    <Content Include="client\assets\img\48-h.png" />
+    <Content Include="client\assets\img\48-h.svg" />
+    <Content Include="client\assets\img\accucheck-img-2%402x.png" />
+    <Content Include="client\assets\img\accucheck-img-2%403x.png" />
+    <Content Include="client\assets\img\accucheck-img-2.png" />
+    <Content Include="client\assets\img\all-my-benefits-1440x500.jpg" />
+    <Content Include="client\assets\img\back.svg" />
+    <Content Include="client\assets\img\becomeanelectedleader.jpg" />
+    <Content Include="client\assets\img\benefit-hero.jpg" />
+    <Content Include="client\assets\img\ca.svg" />
+    <Content Include="client\assets\img\card-1.jpg" />
+    <Content Include="client\assets\img\card-2.png" />
+    <Content Include="client\assets\img\card-3.png" />
+    <Content Include="client\assets\img\check.svg" />
+    <Content Include="client\assets\img\close.svg" />
+    <Content Include="client\assets\img\down-arrow.svg" />
+    <Content Include="client\assets\img\elections.jpg" />
+    <Content Include="client\assets\img\en-ca.svg" />
+    <Content Include="client\assets\img\en-gb.svg" />
+    <Content Include="client\assets\img\en-us.svg" />
+    <Content Include="client\assets\img\everdaymoney.png" />
+    <Content Include="client\assets\img\facebook.svg" />
+    <Content Include="client\assets\img\flags16.png" />
+    <Content Include="client\assets\img\foresters-banner-1900x600.jpg" />
+    <Content Include="client\assets\img\foresters-go.png" />
+    <Content Include="client\assets\img\fr-ca.svg" />
+    <Content Include="client\assets\img\gb.svg" />
+    <Content Include="client\assets\img\group-5%402x.png" />
+    <Content Include="client\assets\img\group-5.png" />
+    <Content Include="client\assets\img\header-logo.svg" />
+    <Content Include="client\assets\img\helping-families-in-need-630-x-300%402x.png" />
+    <Content Include="client\assets\img\helping-families-in-need-630-x-300%403x.png" />
+    <Content Include="client\assets\img\helping-families-in-need-630-x-300.png" />
+    <Content Include="client\assets\img\icons-check-medium.svg" />
+    <Content Include="client\assets\img\icons-chevron-down-small.svg" />
+    <Content Include="client\assets\img\icons-chevron-left-small.svg" />
+    <Content Include="client\assets\img\icons-close-small.svg" />
+    <Content Include="client\assets\img\icons-community-grants-promo.svg" />
+    <Content Include="client\assets\img\icons-competitive-scholarship-promo.svg" />
+    <Content Include="client\assets\img\icons-download-medium.svg" />
+    <Content Include="client\assets\img\icons-download-small-white.svg" />
+    <Content Include="client\assets\img\icons-download-small.svg" />
+    <Content Include="client\assets\img\icons-edit-small.svg" />
+    <Content Include="client\assets\img\icons-everyday-money-promo.svg" />
+    <Content Include="client\assets\img\icons-lawassure-promo.svg" />
+    <Content Include="client\assets\img\icons-learning-promo.svg" />
+    <Content Include="client\assets\img\icons-medical-added-benefits-promo.svg" />
+    <Content Include="client\assets\img\icons-minus-circle-small.svg" />
+    <Content Include="client\assets\img\icons-notifications-informational-medium-small.svg" />
+    <Content Include="client\assets\img\icons-notifications-success-medium-small.svg" />
+    <Content Include="client\assets\img\icons-plus-circle-small.svg" />
+    <Content Include="client\assets\img\icons-shopping-cart-promo.svg" />
+    <Content Include="client\assets\img\icons-sign-in-small.svg" />
+    <Content Include="client\assets\img\icons-user-small.svg" />
+    <Content Include="client\assets\img\icons-volunteer-leadership-promo.svg" />
+    <Content Include="client\assets\img\instagram.svg" />
+    <Content Include="client\assets\img\kids%402x.png" />
+    <Content Include="client\assets\img\kids%403x.png" />
+    <Content Include="client\assets\img\kids.png" />
+    <Content Include="client\assets\img\lawassurebanner_dark.png" />
+    <Content Include="client\assets\img\lawassurebanner_light.jpg" />
+    <Content Include="client\assets\img\leaadershiplandingpage.jpg" />
+    <Content Include="client\assets\img\leadership-image-2%402x.png" />
+    <Content Include="client\assets\img\leadership-image-2%403x.png" />
+    <Content Include="client\assets\img\leadership-image-2.png" />
+    <Content Include="client\assets\img\leadershipdevelopmentconference.jpg" />
+    <Content Include="client\assets\img\lifehack-anxiety%402x.png" />
+    <Content Include="client\assets\img\lifehack-anxiety%403x.png" />
+    <Content Include="client\assets\img\lifehack-anxiety.png" />
+    <Content Include="client\assets\img\linkedin.svg" />
+    <Content Include="client\assets\img\llp%402x.png" />
+    <Content Include="client\assets\img\llp%403x.png" />
+    <Content Include="client\assets\img\llp.png" />
+    <Content Include="client\assets\img\loading.gif" />
+    <Content Include="client\assets\img\may-2019-foresters-report%402x.png" />
+    <Content Include="client\assets\img\may-2019-foresters-report%403x.png" />
+    <Content Include="client\assets\img\may-2019-foresters-report.png" />
+    <Content Include="client\assets\img\medicalmemberbenefit_dark.jpg" />
+    <Content Include="client\assets\img\medicalmemberbenefit_light.jpg" />
+    <Content Include="client\assets\img\medium-small.svg" />
+    <Content Include="client\assets\img\member-benefits-630-x-300%403x.jpg" />
+    <Content Include="client\assets\img\mobile-menu-medium.svg" />
+    <Content Include="client\assets\img\multi-sport-court-long-beach-us-2019-74.png" />
+    <Content Include="client\assets\img\note.svg" />
+    <Content Include="client\assets\img\playground-build-minneapolis-us-2018-013-0460-01%403x.jpg" />
+    <Content Include="client\assets\img\playground-build-minneapolis-us.png" />
+    <Content Include="client\assets\img\question.svg" />
+    <Content Include="client\assets\img\ROCHE_diabetes.jpg" />
+    <Content Include="client\assets\img\scholarship-3%402x.png" />
+    <Content Include="client\assets\img\scholarship-3%403x.png" />
+    <Content Include="client\assets\img\scholarship-3.png" />
+    <Content Include="client\assets\img\scholarships-banner1900 x 600.jpg" />
+    <Content Include="client\assets\img\scholarships.jpg" />
+    <Content Include="client\assets\img\small.svg" />
+    <Content Include="client\assets\img\spsgme-050-us%402x.png" />
+    <Content Include="client\assets\img\spsgme-050-us%403x.png" />
+    <Content Include="client\assets\img\spsgme-050-us.png" />
+    <Content Include="client\assets\img\students-volunteering-630-x-300%402x.png" />
+    <Content Include="client\assets\img\students-volunteering-630-x-300%403x.png" />
+    <Content Include="client\assets\img\students-volunteering-630-x-300.png" />
+    <Content Include="client\assets\img\success.svg" />
+    <Content Include="client\assets\img\twitter.svg" />
+    <Content Include="client\assets\img\us.svg" />
+    <Content Include="client\assets\img\user-medium.svg" />
+    <Content Include="client\assets\img\volunteer-1%402x.png" />
+    <Content Include="client\assets\img\volunteer-1%403x.png" />
+    <Content Include="client\assets\img\volunteer-1.png" />
+    <Content Include="client\assets\img\volunteer-2%402x.png" />
+    <Content Include="client\assets\img\volunteer-2%403x.jpg" />
+    <Content Include="client\assets\img\volunteer-2%403x.png" />
+    <Content Include="client\assets\img\volunteer-2.png" />
+    <Content Include="client\assets\img\walking-ladies%402x.jpg" />
+    <Content Include="client\assets\img\walking-ladies%403x.jpg" />
+    <Content Include="client\assets\img\walking-ladies.jpg" />
+    <Content Include="client\assets\img\warning-1.svg" />
+    <Content Include="client\assets\img\warning.svg" />
+    <Content Include="client\components\activities-landing\activities-landing.html" />
+    <Content Include="client\components\cookie-policy\cookie-policy.js" />
+    <Content Include="client\components\employee-access\employee-access.html" />
+    <Content Include="client\components\cookie-policy\cookie-policy.html" />
+    <Content Include="client\components\cert-details\cert-details.html" />
+    <Content Include="client\components\cert-details\cert-details.js" />
+    <Content Include="client\components\home-page\home-page.html" />
+    <Content Include="client\components\home-page\home-page.js" />
+    <Content Include="client\components\law_assure\law_assure.js" />
+    <Content Include="client\components\leadership-nomination\leadership-nomination.html" />
+    <Content Include="client\components\leadership-development\leadership-development.html" />
+    <Content Include="client\components\leadership-become-leader\leadership-become-leader.html" />
+    <Content Include="client\components\leadership-landing\leadership-landing.html" />
+    <Content Include="client\components\all-benefits\all-benefits.html" />
+    <Content Include="client\components\everyday-money\everyday-money.html" />
+    <Content Include="client\components\everyday-money\everyday-money.js" />
+    <Content Include="client\components\forgot-cert-email-sent\forgot-cert-email-sent.html" />
+    <Content Include="client\components\forgot-cert-email-sent\forgot-cert-email-sent.js" />
+    <Content Include="client\components\header\authenticated-header.html" />
+    <Content Include="client\components\forgot-cert\forgot-cert.html" />
+    <Content Include="client\components\forgot-cert\forgot-cert.js" />
+    <Content Include="client\components\modal-popup\modal-popup.js" />
+    <Content Include="client\components\my-branch\my-branch.html" />
+    <Content Include="client\components\employee-profile\employee-profile.html" />
+    <Content Include="client\components\my-profile-uk\my-profile-uk.html" />
+    <Content Include="client\components\create-password\create-password.html" />
+    <Content Include="client\components\create-password\create-password.js" />
+    <Content Include="client\components\employee-register\employee-register.html" />
+    <Content Include="client\components\roche\roche.html" />
+    <Content Include="client\components\roche\roche.js" />
+    <Content Include="client\components\medical_member\medical_member.html" />
+    <Content Include="client\components\medical_member\medical_member.js" />
+    <Content Include="client\components\my-profile\my-profile.html" />
+    <Content Include="client\components\my-profile\my-profile.js" />
+    <Content Include="client\components\scholarships\scholarships.html" />
+    <Content Include="client\components\scholarships\scholarships.js" />
+    <Content Include="client\components\law_assure\law_assure.html" />
+    <Content Include="client\components\customer_care\customer_care.js" />
+    <Content Include="client\components\forget_password\forget_password.html" />
+    <Content Include="client\components\forget_password\forget_password.js" />
+    <Content Include="client\components\customer_care\customer_care.html" />
+    <Content Include="client\components\forget_password_confirmation\forget_password_confirmation.html" />
+    <Content Include="client\components\header\country-select.js" />
+    <Content Include="client\components\register\register.html" />
+    <Content Include="client\components\register\register.js" />
+    <Content Include="client\fonts\fontawesome-webfont.svg" />
+    <Content Include="client\components\footer\footer.html" />
+    <Content Include="client\components\header\header.js" />
+    <Content Include="client\components\header\non-auth-header.html" />
+    <Content Include="client\components\login\login.html" />
+    <Content Include="client\fonts\MuseoSans-300.svg" />
+    <Content Include="client\fonts\MuseoSans-500.svg" />
+    <Content Include="client\index.html" />
+    <Content Include="client\js\custom\tooltip.js" />
+    <Content Include="client\js\custom\activities-widget.js" />
+    <Content Include="client\js\custom\card-container.js" />
+    <Content Include="client\js\custom\main.js" />
+    <Content Include="client\components\login\login.js" />
+    <Content Include="client\js\lib\attrchange.js" />
+    <Content Include="client\js\lib\bootstrap.min.js" />
+    <Content Include="client\js\lib\jquery-ui.min.js" />
+    <Content Include="client\js\lib\jquery.min.js" />
+    <Content Include="client\js\lib\moment-with-locales.js" />
+    <Content Include="client\js\lib\outline.js" />
+    <Content Include="client\js\lib\popper.min.js" />
+    <Content Include="gulp.config.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="Readme.txt" />
+    <Content Include="server\app.js" />
+    <Content Include="server\favicon.ico" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".jscsrc" />
+    <Content Include="client\fonts\fontawesome-webfont.eot" />
+    <Content Include="client\fonts\fontawesome-webfont.ttf" />
+    <Content Include="client\fonts\fontawesome-webfont.woff" />
+    <Content Include="client\fonts\fontawesome-webfont.woff2" />
+    <Content Include="client\fonts\FontAwesome.otf" />
+    <Content Include="client\assets\font-awsome\scss\font-awesome.scss" />
+    <Content Include="client\assets\font-awsome\scss\_animated.scss" />
+    <Content Include="client\assets\font-awsome\scss\_bordered-pulled.scss" />
+    <Content Include="client\assets\font-awsome\scss\_core.scss" />
+    <Content Include="client\assets\font-awsome\scss\_fixed-width.scss" />
+    <Content Include="client\assets\font-awsome\scss\_icons.scss" />
+    <Content Include="client\assets\font-awsome\scss\_larger.scss" />
+    <Content Include="client\assets\font-awsome\scss\_list.scss" />
+    <Content Include="client\assets\font-awsome\scss\_mixins.scss" />
+    <Content Include="client\assets\font-awsome\scss\_path.scss" />
+    <Content Include="client\assets\font-awsome\scss\_rotated-flipped.scss" />
+    <Content Include="client\assets\font-awsome\scss\_screen-reader.scss" />
+    <Content Include="client\assets\font-awsome\scss\_stacked.scss" />
+    <Content Include="client\assets\font-awsome\scss\_variables.scss" />
+    <Content Include="client\components\all-benefits\_all-benefits.scss" />
+    <Content Include="client\components\leadership-landing\_leadership-landing.scss" />
+    <Content Include="client\assets\img\sample.pdf" />
+    <Content Include="client\components\home-page\_home-page.scss" />
+    <Content Include="client\components\activities-landing\_activities-landing.scss" />
+    <None Include="client\components\everyday-money\_everyday-money.scss" />
+    <Content Include="client\components\cookie-policy\_cookie-policy.scss" />
+    <None Include="client\components\footer\_footer.scss" />
+    <Content Include="client\components\register\_register.scss" />
+    <Content Include="client\components\forget_password\_forget_password.scss" />
+    <Content Include="client\components\forget_password_confirmation\_forget_password_confirmation.scss" />
+    <Content Include="client\components\cert-details\_cert-details.scss" />
+    <None Include="client\components\forgot-cert-email-sent\_forgot-cert-email-sent.scss" />
+    <None Include="client\components\header\_header.scss" />
+    <Content Include="client\components\medical_member\_medical_member.scss" />
+    <Content Include="client\components\roche\_roche.scss" />
+    <Content Include="client\components\forgot-cert\_forgot-cert.scss" />
+    <Content Include="client\components\leadership-become-leader\_leadership-become-leader.scss" />
+    <Content Include="client\components\leadership-development\_leadership-development.scss" />
+    <Content Include="client\components\leadership-nomination\_leadership-nomination.scss" />
+    <Content Include="client\components\my-profile\_my-profile.scss" />
+    <Content Include="client\components\my-branch\_my-branch.scss" />
+    <Content Include="client\components\employee-access\_employee-access.scss" />
+    <Content Include="client\components\create-password\_create-password.scss" />
+    <Content Include="client\components\employee-profile\_employee-profile.scss" />
+    <Content Include="client\components\employee-register\_employee-register.scss" />
+    <Content Include="client\components\modal-popup\_modal-popup.scss" />
+    <Content Include="client\components\law_assure\_law_assure.scss" />
+    <None Include="client\components\scholarships\_scholarships.scss" />
+    <None Include="client\components\login\_login.scss" />
+    <Content Include="client\styles\_mixins.scss" />
+    <Content Include="client\fonts\MuseoSans-100.woff" />
+    <Content Include="client\fonts\MuseoSans-100Italic.woff" />
+    <Content Include="client\fonts\MuseoSans-300.eot" />
+    <Content Include="client\fonts\MuseoSans-300.ttf" />
+    <Content Include="client\fonts\MuseoSans-300.woff" />
+    <Content Include="client\fonts\MuseoSans-300Italic.woff" />
+    <Content Include="client\fonts\MuseoSans-500.woff" />
+    <Content Include="client\fonts\MuseoSans-500Italic.woff" />
+    <Content Include="client\fonts\MuseoSans-700.woff" />
+    <Content Include="client\fonts\MuseoSans-700Italic.woff" />
+    <Content Include="client\fonts\MuseoSans-900.woff" />
+    <Content Include="client\fonts\MuseoSans-900Italic.woff" />
+    <Content Include="client\fonts\MuseoSans-500.eot" />
+    <Content Include="client\fonts\MuseoSans-500.ttf" />
+    <Content Include="client\js\lib\bootstrap.min.js.map" />
+    <Content Include="client\styles\_lib.scss" />
+    <Content Include="client\fonts\MuseoSlab-900.otf" />
+    <Content Include="client\fonts\MuseoSlab-900italic.otf" />
+    <None Include="client\styles\main.scss" />
+    <Content Include="package-lock.json" />
+    <Content Include="client\styles\_hero.scss" />
+    <None Include="package.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="client\build\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IOFDev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SITCM|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SITCD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QACM|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QACD|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UATCM|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UATCD1|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UATCD2|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProdCM|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProdCD1|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ProdCD2|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51860</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44376/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

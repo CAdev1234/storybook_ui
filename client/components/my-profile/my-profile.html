@@ -1,0 +1,455 @@
+﻿<div class="hero hero-theme-profile">
+    <div class="content">
+        <div class="title heading-1" data-username="Nas">
+            Hi, {{username}}!
+        </div>
+        <div class="desc text-1">
+            My Profile is where you can make changes to your account profile settings. Update any of the editable sections below by clicking “change” and filling in the appropriate form fields when prompted. Address change and Contact Information changes are not available here. Please contact Service Centre for these changes.
+        </div>
+        <div class="ctas">
+        </div>
+    </div>
+</div>
+<div class="full-width-container container-theme-light border-bottom">
+    <!--tab component-->
+    <div class="tabs-container tab-theme-light centre-content">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active tab-title" id="login_info_link" data-toggle="tab" href="#login_info_content" role="tab" aria-controls="login_info" aria-selected="true">Login information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link tab-title" id="contact_link" data-toggle="tab" href="#contact_content" role="tab" aria-controls="contact" aria-selected="false">Contact preferences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link tab-title" id="family_info_link" data-toggle="tab" href="#family_info_content" role="tab" aria-controls="family_info" aria-selected="false">Family information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link tab-title" id="email_pref_link" data-toggle="tab" href="#email_pref_content" role="tab" aria-controls="email_pref" aria-selected="false">Email preferences</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active show" id="login_info_content" role="tabpanel" aria-labelledby="login_info">
+                <div id="login_info" class="profile-container">
+                    <div class="success-message d-none">
+                        <div class="title">
+                            <img class="icon warning-icon" src="/content/membership/assets/icons-notifications-success-medium-small.svg" />
+                            <p>Password change successful</p>
+                        </div>
+                        <div class="content">
+                            <p>Your password has been changed. Lorem ipsum dolor sit amet consequitor enuldiem,</p>
+                        </div>
+                    </div>
+                    <h2>Login Information</h2>
+                    <div class="info-row">
+                        <label class="label-1">Username: <span class="item_value">Nas</span></label>
+                    </div>
+                    <div class="info-row">
+                        <label class="label-1">Password:<button id="change_passwd" type="button" class="link"><span class="item_value">change password</span></button></label>
+                    </div>
+                    <div class="info-instr">
+                        <div class="body-1">Please enter your new password below.</div>
+                    </div>
+                    <!--TODO action url needs to be updated-->
+                    <form id="change_passwd_form" class="profile-form" action="api/changePassword" method="post">
+                        <div class="info">
+                            <div class="heading-2">Change Password</div>
+                        </div>
+                        <div class="item-row error-wrapper no-error">
+                            <!--adding no-error style will hide this error section-->
+                            <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                            <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-wrapper">
+                                <label class="label-1">
+                                    <span class="text-2">Password</span>
+                                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}" placeholder="Enter Password" class="input-field" id="password" required />
+                                    <span class="toggle-pwd">
+                                        <span id="show" class="show">Show</span>
+                                        <span id="hide" class="hide">Hide</span>
+                                    </span>
+                                    <span class="error">Please enter your password</span>
+                                </label>
+                                <div class="caption-text">8 - 14 characters, including at least one letter and one number. </div>
+                            </div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-wrapper">
+                                <label class="label-1">
+                                    <span class="text-2">Confirm Password</span>
+                                    <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}" placeholder="Confirm Password" class="input-field" id="confirmPassword" required />
+                                    <span class="toggle-pwd">
+                                        <span id="show" class="show">Show</span>
+                                        <span id="hide" class="hide">Hide</span>
+                                    </span>
+                                    <span class="error">Please enter your confirm password</span>
+                                </label>
+                                <div class="caption-text">Both passwords must match</div>
+                            </div>
+                        </div>
+                        <div class="item-row action submit">
+                            <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                            <button type="submit" class="button-primary">Submit</button>
+                        </div>
+                        <div class="item-row action cancel">
+                            <button type="button" class="cta-text link"><span>Cancel</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact_content" role="tabpanel" aria-labelledby="contact">
+                <div id="contact" class="profile-container">
+                    <div class="success-message d-none">
+                        <div class="title">
+                            <img class="icon warning-icon" src="/content/membership/assets/icons-notifications-success-medium-small.svg" />
+                            <p>Contact preferences change successful</p>
+                        </div>
+                        <div class="content">
+                            <p>Your contact preferences have been changed. Lorem ipsum dolor sit amet consequitor enuldiem,</p>
+                        </div>
+                    </div>
+                    <h2>Contact information and preferences</h2>
+                    <div class="info-row">
+                        <label class="label-1">Email address: <span class="item_value">Nas@example.com</span></label>
+                    </div>
+                    <div class="info-row">
+                        <label class="label-1">
+                            Preferred communication language: <span class="item_value">English</span>
+                        </label>
+                    </div>
+                    <div class="info-row">
+                        <button id="change_contact" type="button" class="link active"><span>Make changes</span></button>
+                    </div>
+                    <div class="info-instr">
+                        <div class="body-1">Please enter your new contact information and preferences below.</div>
+                    </div>
+                    <!--TODO action url needs to be updated-->
+                    <form id="change_contact_form" class="profile-form" action="api/changeContactInfo" method="post">
+                        <div class="info">
+                            <div class="heading-2">Update contact information and preferences</div>
+                        </div>
+                        <div class="item-row error-wrapper no-error">
+                            <!--adding no-error style will hide this error section-->
+                            <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                            <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+                        </div>
+                        <div class="item-row">
+                            <div class="item-wrapper">
+                                <label class="label-1">
+                                    <span class="text-2">Email address</span>
+                                    <input type="email" class="input-field" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}" required />
+                                    <span class="error">Please enter a valid email address</span>
+                                </label>
+                                <div class="caption-text">This email will be used for all MyForesters.com communications.</div>
+                            </div>
+                        </div>
+                        <div class="item-row">
+                            <fieldset>
+                                <legend class="label-1">Preferred communication language</legend>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" name="language" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">English</span>
+                                    </label>
+                                </div>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" name="language">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">French</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="item-row action submit">
+                            <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                            <button type="submit" class="button-primary">Submit</button>
+                        </div>
+                        <div class="item-row action cancel">
+                            <button type="button" class="cta-text link"><span>Cancel</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="family_info_content" role="tabpanel" aria-labelledby="family_info">
+                <div id="family_info" class="profile-container" data-family-info='{"spouse":true,"spouseFirstName":"ww","spouseLastName":"hh","grandparent":false,"children":[{"firstName":"sdf","lastName":"xcfg","year":"2000","month":"4","day":"22"}]}'>
+                    <!--TODO action url needs to be updated-->
+                    <form class="profile-form family-info-form" action="api/updateFamilyInfo" method="post">
+                        <h2>Family Information (optional)</h2>
+                        <div class="info-instr active">
+                            <div class="body-1">Please provide us with your family information to receive information about member benefits and services of interest to you.</div>
+                        </div>
+                        <div class="item-row error-wrapper no-error">
+                            <!--adding no-error style will hide this error section-->
+                            <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                            <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+                        </div>
+                        <div class="item-row spouse-row">
+                            <fieldset class="radio">
+                                <legend class="label-1">Do you have a spouse? </legend>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" id="spouse" name="spouse" value="yes">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" id="spouse" name="spouse" value="no">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">No</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="spouse sub-content d-none">
+                                <div class="item-row names">
+                                    <div class="text-2">Spouse</div>
+                                    <div class="item-wrapper">
+                                        <label class="label-1" for="spouseFirstName">
+                                            First Name
+                                            <input type="text" class="input-field" id="spouseFirstName" name="spouseFirstName" />
+                                            <span class="error">Please enter your spouse's first name</span>
+                                        </label>
+                                    </div>
+                                    <div class="item-wrapper">
+                                        <label class="label-1" for="spouseLastName">
+                                            Last Name
+                                            <input type="text" class="input-field" id="spouseLastName" name="spouseLastName" />
+                                            <span class="error">Please enter your spouse's last name</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row">
+                            <fieldset class="radio">
+                                <legend class="label-1">Are you a grandparent? </legend>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" id="grandparent" name="grandparent" value="yes">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" id="grandparent" name="grandparent" value="no">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">No</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="item-row">
+                            <fieldset class="radio">
+                                <legend class="label-1">Do you have children under the age of 18?</legend>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" id="children" name="children" value="yes">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="item-wrapper">
+                                    <label class="label-1 radio-container">
+                                        <input type="radio" id="children" name="children" value="no">
+                                        <span class="checkmark"></span>
+                                        <span class="text-2">No</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="children d-none" data-age-validation-message="Age must be more than 16 years to register for the portal.">
+                                <div class="info">
+                                    <div class="body-2">If you have children under the age of 18, please provide their names and birth dates below.</div>
+                                </div>
+                                <div class="added-child sub-content d-none" id="addedChildTemplate">
+                                    <div class="text-2">Child <span class="nth"></span></div>
+                                    <div class="content-row name-row">
+                                        <span class="title label-1">Name</span>
+                                        <span class="value text-2">Adam Smith</span>
+                                    </div>
+                                    <div class="content-row dob-row">
+                                        <div class="content">
+                                            <span class="title label-1">Date of Birth</span>
+                                            <span class="value text-2">April 12, 2002</span>
+                                        </div>
+                                        <div class="actions">
+                                            <button class="remove-action btn-action">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-child sub-content">
+                                    <div class="item-row names">
+                                        <div class="text-2"><span class="nth">New</span> Child</div>
+                                        <div class="item-wrapper">
+                                            <label class="label-1" for="childFirstName">
+                                                First Name
+                                                <input type="text" class="input-field" id="childFirstName" name="childFirstName" />
+                                                <span class="error">Please enter your child first name</span>
+                                            </label>
+                                        </div>
+                                        <div class="item-wrapper">
+                                            <label class="label-1" for="childLastName">
+                                                Last Name
+                                                <input type="text" class="input-field" id="childLastName" name="childLastName" />
+                                                <span class="error">Please enter your child last name</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item-row dob">
+                                        <fieldset class="item-wrapper">
+                                            <legend class="label-1">
+                                                Date of Birth
+                                            </legend>
+                                            <div class="fields">
+                                                <select id="newChildDobMonth" class="input-field month" name="newChildDobMonth" aria-label="Month">
+                                                    <option value="" disabled selected>Month</option>
+                                                    <option value="1">Jan</option>
+                                                    <option value="2">Feb</option>
+                                                    <option value="3">Mar</option>
+                                                    <option value="4">Apr</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">Jun</option>
+                                                    <option value="7">Jul</option>
+                                                    <option value="8">Aug</option>
+                                                    <option value="9">Sep</option>
+                                                    <option value="10">Oct</option>
+                                                    <option value="11">Nov</option>
+                                                    <option value="12">Dec</option>
+                                                </select>
+                                                <input id="newChildDobDay" class="input-field" name="newChildDobDay" placeholder="Day" aria-label="Day" min="1" max="31" type="number" />
+                                                <input id="newChildDobYear" class="input-field" name="newChildDobYear" placeholder="Year" aria-label="Year" min="1900" max="2050" type="number" />
+                                                <span class="error">Please enter a valid date</span>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="item-row add-new">
+                                        <button type="button" class="add-action btn-action">Add child information</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-row action submit">
+                            <button type="submit" class="button-primary">Update</button>
+                        </div>
+                        <div class="item-row action cancel">
+                            <button type="reset" class="cta-text link"><span>Cancel</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="email_pref_content" role="tabpanel" aria-labelledby="email_pref">
+                <div id="email_pref" class="profile-container" data-email-pref='{"unsubscribeAll":true,"complimentaryMemberBenefits":true,"invitationToEvents":true,"membershipMatters":false,"surveys":true,"infoProducts":false,"forestersReport":true,"branchCouncil":false,"forestersGo":false}'>
+                    <h2>Manage your email subscription preferences</h2>
+                    <!--TODO action url needs to be updated-->
+                    <form class="profile-form email-pref-form active" action="api/updateEmailPref" method="post">
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="unsubscribeAll" name="unsubscribeAll">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Unsubscribe from All Emails</span>
+                                    If you unsubscribe from all e-mails then you will not receive e-mails from Foresters, including in respect of your certificate, unless you update your preferences or specifically request electronic communication.
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="complimentaryMemberBenefits" name="complimentaryMemberBenefits">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Complimentary Member Benefits</span>
+                                    Periodic emails related to your complimentary member (1) benefits including grants, informational webinars, scholarships, legal and financial resources and more
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="invitationToEvents" name="invitationToEvents">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Invitation to Fun Family and Volunteer Events</span>
+                                    Exclusive invitations to local volunteer and family events
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="membershipMatters" name="membershipMatters">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">
+                                        Membership Matters
+                                    </span>
+                                    eNewsletter covering topics such as lifestyle and health tips, member benefits, financial products, family and financial wellness
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="surveys" name="surveys">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Surveys</span>
+                                    Have your say and enable Foresters to better serve you
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="infoProducts" name="infoProducts">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">
+                                        Information about Foresters Financial Products
+                                    </span>
+                                    Occasional information related to other Foresters products
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="forestersReport" name="forestersReport">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Foresters Report</span>                                    
+                                    Receive the electronic version of the annual Foresters Report
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="branchCouncil" name="branchCouncil">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Branch Council Elections</span>                                    
+                                    Receive the electronic notices for annual Branch Council elections
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row">
+                            <label class="check-container">
+                                <input type="checkbox" id="forestersGo" name="forestersGo">
+                                <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                                <span class="text">
+                                    <span class="body-1-bold">Foresters Go (Pilot)</span>                                    
+                                    Receive emails related to the Foresters Go program
+                                </span>
+                            </label>
+                        </div>
+                        <div class="item-row action submit">
+                            <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                            <button type="submit" class="button-primary">Update</button>
+                        </div>
+                        <div class="item-row action cancel">
+                            <button type="button" class="cta-text link"><span>Cancel</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,221 @@
+@import "../../styles/_mixins.scss";
+
+.footer {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    border-bottom: solid 10px $plum;
+
+    .d-none {
+        &.is-authenticated {
+            display: block !important;
+
+            .card {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .logo {
+        height: 48px;
+        width: 100%;
+        margin: 23px 0px;
+    }
+
+    .card-body {
+        &:not(:first-child) {
+            padding-top: 10px;
+        }
+
+        .headingOne {
+            button {
+            }
+        }
+
+        .sub-heading {
+            font-family: MuseoSans-300;
+            font-size: 16px;
+            color: $text-2;
+            padding-bottom: 8px;
+        }
+
+        .lang-options {
+            img {
+                height: 32px;
+                width: 32px;
+                border-radius: 16px;
+                display: inline-block;
+                padding-right: 8px;
+            }
+
+            .option {
+                padding: 0 8px 0 4px;
+                display: inline-block;
+                border-right: 1px solid $text-1;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        a {
+            color: $themeColor;
+            font-family: MuseoSans-500;
+            font-size: 14px;
+            text-decoration: underline;
+            display: block;
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+
+            &.hours {
+                margin-top: -8px;
+            }
+        }
+    }
+
+    .social-links {
+
+        .social-wrapper {
+            width: 240px;
+            margin: 0 auto;
+            padding: 15px 0;
+
+            .social {
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+                padding: 0 12px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(sm) {
+    .footer {
+        padding: 0px 28px;
+
+        .wrapper {
+            display: flex;
+            padding: 16px 20px;
+
+            &.legal {
+                background-color: $background-3;
+
+                .card {
+                    background-color: $background-3;
+                }
+            }
+
+            .logo {
+                margin: 0;
+                float: left;
+            }
+
+            .social-links {
+                float: right;
+                margin-right: calc((100% - 160px) / 4 - 192px);
+
+                .social-wrapper {
+                    margin-left: 0;
+
+                    .social {
+                        &:first-child {
+                            padding-left: 0;
+                        }
+
+                        padding: 0 4px;
+                    }
+                }
+            }
+
+            .column {
+                flex: 1;
+
+                .card {
+                    border: none;
+                    padding-top: 8px;
+
+                    .heading {
+                        font-family: MuseoSans-300;
+                        font-size: 20px;
+                        color: $text-2;
+                        padding-bottom: 8px;
+                    }
+
+                    .content {
+                        .card-body {
+                            padding: 0;                            
+                        }
+                    }
+                }
+            }
+
+            &.legal {
+                .card {
+                    border: none;
+
+                    .card-body {
+                        padding: 0;
+
+                        a {
+                            display: inline-block;
+                            padding: 0 4px 0 8px;
+                            border-left: 1px solid $text-2;
+                            color: $text-2;
+
+                            &:first-child {
+                                padding-left: 0;
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include respond-above(md) {
+    .footer {
+        padding: 0;
+
+        .wrapper {
+            padding: 16px 96px;
+
+            .social-links {
+                margin-right: calc((100% - 160px) / 4 - 200px);
+                .social-wrapper {
+                    .social {
+                        padding: 0 6px;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+@include respond-above(lg) {
+    .footer {
+
+        .wrapper {
+            padding: 16px 160px;
+
+            .social-links {
+                margin-right: calc((100% - 320px) / 4 - 160px);
+
+                .social-wrapper {
+                    .social {
+                        padding: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+}

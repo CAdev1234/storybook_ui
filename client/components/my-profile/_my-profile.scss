@@ -1,0 +1,513 @@
+@import "../styles/_mixins.scss";
+.profile-container {
+    padding-top: 24px;
+    width: 100%;
+
+    .info-instr {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .info-row {
+        padding-bottom: 16px;
+
+        #change_contact {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .profile-form {
+        border: 1px solid $border-4;
+        background-color: $component-bg-4;
+        padding: 24px;
+        margin-top: 24px;
+        display: none;
+
+        &.family-info-form {
+            display: block;
+        }
+
+        .action {
+            button {
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+
+        .info {
+            padding-bottom: 12px;
+        }
+
+        .item-row {
+            padding-bottom: 32px;
+
+            .toggle-pwd {
+                left: -24px;
+            }
+
+            &.error-wrapper {
+                padding-bottom: 0;
+                margin-bottom: 24px;
+            }
+
+            &.action {
+                text-align: center;
+            }
+        }
+
+        .check-container {
+            .text {
+                position: relative;
+                display: inline-block;
+                padding: 0 0 0 12px;
+                left: 34px;
+                top: -42px;
+                display: inline-block;
+                width: calc(100% - 12px);
+
+                .body-1-bold {
+                    display: block;
+                    padding-bottom: 4px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    h2 {
+        padding-bottom: 16px;
+    }
+
+    .label-1 {
+        font-weight: bold;
+        width: 100%;
+
+        span.item_value {
+            margin-left: 8px;
+            font-weight: normal;
+        }
+
+        span.error {
+            font-weight: normal;
+        }
+
+        button.link {
+            padding-left: 8px;
+
+            span {
+                font-weight: normal;
+
+                &.item_value {
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        span.text-2 {
+            display: block
+        }
+    }
+
+    fieldset {
+        legend {
+            padding-bottom: 16px;
+        }
+
+        .item-wrapper {
+            display: inline-block;
+
+            &:last-child {
+                padding-left: 24px;
+            }
+
+            .text-2 {
+                padding-top: 6px;
+            }
+        }
+    }
+
+    .family-info-form {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+
+        .sub-content {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            background-color: $component-bg;
+            border: 1px solid $border-4;
+
+            .item-row {
+                padding: 16px 24px;
+            }
+
+            &.new-child {
+                background-color: $component-bg-4;
+            }
+        }
+
+        .children {
+            .info {
+                padding-bottom: 32px;
+            }
+
+            .added-child {
+                padding: 24px;
+                margin: 24px 0 32px 0;
+                background-color: $component-bg;
+                border: 1px solid $border-4;
+
+                .content-row {
+                    padding: 24px 0 16px 0;
+
+                    .label-1 {
+                        width: inherit;
+                    }
+
+                    .title {
+                        float: left;
+                        text-align: left;
+                    }
+
+                    .value {
+                        float: right;
+                        text-align: right;
+                    }
+
+                    .content {
+                        height: 24px;
+                    }
+
+                    .actions {
+                        height: 24px;
+                        padding: 24px 0;
+                    }
+                }
+
+                .actions {
+                    .remove-action {
+                        float: left;
+
+                        &::before {
+                            content: url("/content/membership/assets/icons-minus-circle-small.svg");
+                            width: 16px;
+                            height: 16px;
+                            position: relative;
+                            top: 3px;
+                            right: 0;
+                            margin-right: 8px;
+                            display: inline-block;
+                        }
+                    }
+
+                    .edit-action {
+                        float: right;
+
+                        &::before {
+                            content: url("/content/membership/assets/icons-edit-small.svg");
+                            width: 16px;
+                            height: 16px;
+                            position: relative;
+                            top: 3px;
+                            right: 0;
+                            margin-right: 8px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .new-child {
+                .item-row {
+
+                    &.dob {
+                        .fields {
+                            .input-field {
+                                padding: 12px 16px;
+                            }
+
+                            select.input-field {
+                                background-color: white;
+                            }
+                        }
+                    }
+
+                    &.add-new {
+                        padding-top: 32px;
+                        padding-bottom: 32px;
+
+                        button {
+                            &::before {
+                                content: url("/content/membership/assets/icons-plus-circle-small.svg");
+                                width: 16px;
+                                height: 16px;
+                                position: relative;
+                                top: 3px;
+                                right: 0;
+                                margin-right: 8px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .item-row {
+            padding: 16px 0;
+
+            .radio {
+                .item-wrapper {
+                    width: calc(50% - 40px);
+                }
+            }
+
+            .item-wrapper {
+                padding-top: 8px;
+                padding-bottom: 8px;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                .label-1 {
+                    display: block;
+
+                    .input-field {
+                        font-family: MuseoSans-300;
+                    }
+                }
+
+                .input-field {
+                    width: 100%;
+                }
+            }
+        }
+
+        .info {
+
+            .heading-1 {
+                padding-bottom: 16px;
+            }
+
+            .body-1 {
+                padding-bottom: 48px;
+            }
+        }
+
+        .names {
+            padding-top: 17px;
+
+            .item-wrapper {
+                vertical-align: top;
+            }
+        }
+
+        .dob {
+
+            .input-field {
+                margin: 8px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            legend.label-1 {
+                margin-bottom: 0;
+            }
+        }
+
+        .email {
+
+            .caption-text {
+            }
+        }
+
+        .action {
+
+            &.submit {
+                margin-top: 26px;
+                text-align: center;
+            }
+
+            &.cancel {
+                text-align: center;
+            }
+        }
+    }
+
+    .email-pref-form {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+
+        label.check-container {
+            margin-bottom: -40px;
+            display: block;
+        }
+
+        .item-row:first-child {
+            .check-container {
+                .text {
+                    border-bottom: 1px solid $border-3;
+                    padding-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+@include respond-above(xs) {
+    .profile-container {
+        max-width: 544px;
+        padding-top: 40px;
+
+        .family-info-form {
+            display: block;
+
+            .info {
+                padding-bottom: 16px;
+            }
+
+            .item-row {
+                padding: 16px 0;
+
+                .radio {
+                    .item-wrapper {
+                        width: 168px;
+                    }
+                }
+
+                fieldset legend {
+                    padding-bottom: 8px;
+                }
+
+                &.dob {
+                    .fields {
+                        #newChildDobDay, #newChildDobYear {
+                            width: 112px;
+                        }
+                    }
+                }
+
+                .item-wrapper {
+                    display: inline-block;
+
+                    .input-field {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .dob {
+                fieldset {
+                    margin: 0;
+                }
+
+                .item-wrapper {
+                    width: 192px;
+
+                    legend {
+                    }
+
+                    .fields {
+                        width: 596px;
+
+                        .input-field {
+                            display: inline-block;
+
+                            &:not(:last-child) {
+                                margin-right: 32px;
+                            }
+                        }
+
+                        .month {
+                            width: 192px;
+                        }
+
+                        .day {
+                            width: 128px;
+                        }
+
+                        .year {
+                            width: 160px;
+                        }
+                    }
+                }
+            }
+
+            .names {
+                .item-wrapper {
+                    &:last-child {
+                        padding-left: 24px;
+                    }
+                    .label-1 {
+                        width: 192px;
+                    }
+                }
+            }
+
+            .action {
+
+                &.submit {
+                    margin-top: 32px;
+                }
+            }
+
+            .children {
+
+                .new-child {
+                    .item-row {
+                        &.add-new .add-action {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(sm) {
+
+}
+
+@include respond-above(md) {
+
+}
+
+@include respond-above(lg) {
+
+}
+
+.membership-access-text {
+    padding: 20px 0 20px 0;
+}
+
+.membership-access-text > .submit {
+    padding: 20px 0 20px 0;
+}

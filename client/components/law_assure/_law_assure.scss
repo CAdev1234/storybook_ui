@@ -1,0 +1,95 @@
+@import "../styles/_mixins.scss";
+
+.modal-general.tnc {
+    .content-container {
+        top: 0;
+        height: calc(100vh);
+
+        .title {
+            font-family: MuseoSans-300;
+            font-size: 28px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.29;
+            letter-spacing: -0.26px;
+            color: $text-2;
+        }
+
+        .content {
+            .scrollable-content {
+                height: 300px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding: 8px 16px;
+                border: 1px solid $border-3;
+
+                .heading-1 {
+                    color: $themeColor;
+                    padding-bottom: 32px;
+                }
+
+                .heading-2 {
+                    font-weight: 700;
+                }
+
+                .check-wrapper {
+                    margin-bottom: 16px;
+
+                    .agree-label {
+                        padding: 6px 0;
+                        display: block;
+                    }
+                }
+
+                strong {
+                    font-weight: 600;
+                }
+
+                p.note {
+                    color: #c10000;
+                }
+            }
+        }
+
+        .agree-tnc {
+            margin-top: 36px;
+
+            &:disabled {
+                background-color: $disable-bg;
+                color: $text-3;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 569px) {
+    .modal-general.tnc {
+        .content-container {
+            top: 20px;
+            height: 576px;
+        }
+    }
+}
+
+@media screen and (min-height: 657px) {
+    .modal-general.tnc {
+        .content-container {
+            top: 40px;
+            height: 576px;
+        }
+    }
+}
+
+@media screen and (min-height: 769px) {
+    .modal-general.tnc {
+        .content-container {
+            top: 16vh;
+            height: 576px;
+
+            .agree-tnc {
+                margin-top: 48px;
+            }
+        }
+    }
+}

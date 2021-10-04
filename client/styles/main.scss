@@ -1,0 +1,83 @@
+@import "node_modules/normalize-scss/sass/normalize/import-now";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "../assets/font-awsome/scss/font-awesome";
+
+@import "./_lib";
+@import "./_hero";
+@import "../components/footer/_footer";
+@import "../components/header/_header";
+@import "../components/login/_login";
+@import "../components/register/_register";
+@import "../components/employee-register/_employee-register.scss";
+@import "../components/forget_password/_forget_password";
+@import "../components/forget_password_confirmation/_forget_password_confirmation";
+@import "../components/law_assure/_law_assure.scss";
+@import "../components/modal-popup/_modal-popup.scss";
+@import "../components/everyday-money/_everyday-money.scss";
+@import "../components/scholarships/_scholarships.scss";
+@import "../components/medical_member/_medical_member.scss";
+@import "../components/forgot-cert/_forgot-cert.scss";
+@import "../components/forgot-cert-email-sent/_forgot-cert-email-sent.scss";
+@import "../components/my-profile/_my-profile.scss";
+@import "../components/employee-profile/_employee-profile.scss";
+@import "../components/create-password/_create-password.scss";
+@import "../components/cookie-policy/_cookie-policy.scss";
+@import "../components/cert-details/_cert-details.scss";
+@import "../components/activities-landing/_activities-landing";
+
+@font-face {
+    font-family: 'MuseoSans-100';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/MuseoSans-100.woff") format("woff");
+}
+@font-face {
+    font-family: 'MuseoSans-300';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/MuseoSans-300.woff") format("woff");
+}
+@font-face {
+    font-family: 'MuseoSans-500';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/MuseoSans-500.woff") format("woff");
+}
+@font-face {
+    font-family: 'MuseoSans-700';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/MuseoSans-700.woff") format("woff");
+}
+@font-face {
+    font-family: 'MuseoSans-900';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/MuseoSans-900.woff") format("woff");
+}
+@font-face {
+    font-family: 'MuseoSlab-900';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/MuseoSlab-900.otf") format("opentype");
+}
+
+body {
+    color: #252525;
+    font-size: 16px;
+    font-family: 'MuseoSans-300';
+    font-weight: 300;
+
+    .main {
+        margin: auto;
+    }
+
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
+
+@include respond-above(xs) {
+
+}

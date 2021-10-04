@@ -1,0 +1,550 @@
+@import "../../styles/_mixins.scss";
+
+.register {
+    display: block;
+    background-color: white;
+
+    .step-indicator {
+        background-color: $neutrals-cream;
+        padding: 24px 20px;
+
+        .wrapper {
+            .line {
+                border-left: 1px solid $border-1;
+                width: 1px;
+                height: 16px;
+                position: relative;
+                left: 32px;
+                top: 0;
+            }
+
+            .line-d-1, .line-d-2 {
+                display: none;
+            }
+        }
+
+        .step-header {
+            color: $text-1;
+            vertical-align: top;
+
+            .step-number {
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                border: 1px solid $border-1;
+                border-radius: 32px;
+                padding-top: 17px;
+                text-align: center;
+                font-family: MuseoSans-500;
+                font-size: 18px;
+
+                &.active {
+                    background-color: $themeColor;
+                    color: white;
+                }
+
+                &.activated {
+                    background-color: $success;
+                    color: white;
+                    background-image: url("/content/membership/assets/icons-check-medium.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    text-indent: -9999px;
+                    white-space: nowrap;
+                }
+            }
+
+            .header-text {
+                display: inline-block;
+                padding-left: 16px;
+                vertical-align: middle;
+                font-family: MuseoSans-300;
+                font-size: 16px;
+            }
+
+            &:not(:last-child) {
+            }
+        }
+    }
+
+    .step-content {
+        padding: 48px 20px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        .register-form {
+
+            .item-row {
+                padding: 16px 0;
+
+                .item-wrapper {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    .label-1 {
+                        display: block;
+
+                        .input-field {
+                            font-family: MuseoSans-300;
+                        }
+                    }
+
+                    .input-field {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .info {
+
+                .heading-1 {
+                    padding-bottom: 16px;
+                }
+
+                .body-1 {
+                    padding-bottom: 48px;
+                }
+            }
+
+            .names {
+                padding-top: 17px;
+
+                .text-2 {
+                    padding-bottom: 24px;
+                }
+
+                .item-wrapper {
+                    vertical-align: top;
+                }
+            }
+
+            .dob {
+
+                .input-field {
+                    margin: 8px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                legend.label-1 {
+                    margin-bottom: 0;
+                }
+            }
+
+            .cert {
+
+                .body-1-link {
+                    padding-top: 8px;
+                    display: block;
+                    text-decoration: underline;
+                }
+            }
+
+            .email {
+
+                .caption-text {
+                }
+            }
+
+            .action {
+
+                &.submit {
+                    margin-top: 26px;
+                }
+                .button-primary, .cta-text {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        &.step-1 {
+
+            .action {
+
+                a.cta-text {
+                    &::after {
+                        content: url("/content/membership/assets/icons-sign-in-small.svg");
+                        width: 16px;
+                        height: 16px;
+                        position: relative;
+                        top: 3px;
+                        right: -8px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &.step-2 {
+            .item-row {
+                .toggle-pwd {
+                    top: -43px;
+                }
+
+                &.radio {
+                    fieldset {
+                        .item-wrapper {
+                            display: inline-block;
+
+                            &:last-child {
+                                margin-left: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.step-3 {
+
+            .heading-1 {
+                word-break: keep-all;
+
+                .optional-text {
+                    display: block;
+                    font-family: 'MuseoSans-300';
+                }
+            }
+
+            .sub-content {
+                padding-top: 24px;
+                padding-bottom: 24px;
+                margin-bottom: 32px;
+                background-color: $component-bg;
+                border: 1px solid $border-4;
+
+                .item-row {
+                    padding: 0 24px;
+                }
+
+                &.new-child {
+                    background-color: $component-bg-4;
+                }
+            }
+
+            .children {
+                .info {
+                    padding-bottom: 32px;
+                }
+
+                .added-child {
+                    padding: 24px;
+                    margin: 24px 0 32px 0;
+                    background-color: $component-bg;
+                    border: 1px solid $border-4;
+
+                    .content-row {
+                        padding: 24px 0 16px 0;
+
+                        .title {
+                            float: left;
+                            text-align: left;
+                        }
+
+                        .value {
+                            float: right;
+                            text-align: right;
+                        }
+
+                        .content {
+                            height: 24px;
+                        }
+
+                        .actions {
+                            height: 24px;
+                            padding: 24px 0;
+                        }
+                    }
+
+                    .actions {
+                        .remove-action {
+                            float: left;
+
+                            &::before {
+                                content: url("/content/membership/assets/icons-minus-circle-small.svg");
+                                width: 16px;
+                                height: 16px;
+                                position: relative;
+                                top: 3px;
+                                right: 0;
+                                margin-right: 8px;
+                                display: inline-block;
+                            }
+                        }
+
+                        .edit-action {
+                            float: right;
+
+                            &::before {
+                                content: url("/content/membership/assets/icons-edit-small.svg");
+                                width: 16px;
+                                height: 16px;
+                                position: relative;
+                                top: 3px;
+                                right: 0;
+                                margin-right: 8px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+
+                .new-child {
+                    .item-row {
+
+                        &.dob {
+                            .fields {
+                                .input-field {
+                                    padding: 12px 16px;
+                                }
+
+                                select.input-field {
+                                    background-color: white;
+                                }
+                            }
+                        }
+
+                        &.add-new {
+                            padding-top: 16px;
+                            padding-bottom: 16px;
+
+                            button {
+                                padding-left: 0;
+
+                                &::before {
+                                    content: url("/content/membership/assets/icons-plus-circle-small.svg");
+                                    width: 16px;
+                                    height: 16px;
+                                    position: relative;
+                                    top: 3px;
+                                    right: 0;
+                                    margin-right: 8px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include respond-above(xs) {
+    .register {
+
+        .step-indicator {
+            height: 192px;
+
+            .wrapper {
+                height: 128px;
+                margin: 8px auto;
+                width: fit-content;
+
+                .step-header {
+                    display: inline-block;
+                    position: relative;
+                    top: 0;
+                    left: 0px;
+
+                    .step-number {
+                        display: block;
+                        margin: 0 auto;
+                        width: 64px;
+                    }
+
+                    .header-text {
+                        display: block;
+                        width: 64px;
+                        text-align: center;
+                        padding-top: 16px;
+                        padding-left: 0;
+                        width: 128px;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 44px;
+                    }
+                }
+
+                .line {
+                    display: block;
+                    border-left: none;
+                    border-bottom: 1px solid $border-1;
+                    width: 112px;
+                    height: 1px;
+                    position: relative;
+                    top: 32px;
+
+                    &.line-1, &.line-2 {
+                        display: none;
+                    }
+
+                    &.line-d-1 {
+                        left: 96px;
+                    }
+
+                    &.line-d-2 {
+                        left: 272px;
+                    }
+                }
+            }
+        }
+
+        .step-content {
+            width: 596px;
+            margin: 0 auto;
+
+            .register-form {
+                .item-row {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+
+                .info {
+                    padding-bottom: 16px;
+
+                    .heading-1 {
+                        text-align: center;
+                    }
+                }
+
+                .item-row {
+                    padding: 16px 0;
+
+                    .item-wrapper {
+                        display: inline-block;
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                        .input-field {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+
+                .names {
+                    .item-wrapper {
+                        width: 192px;
+
+                        &:not(:last-child) {
+                            margin-right: 32px;
+                        }
+                    }
+                }
+
+                .dob {
+                    fieldset {
+                        margin: 0;
+                    }
+
+                    .item-wrapper {
+                        width: 192px;
+
+                        legend {
+                        }
+
+                        .fields {
+                            width: 596px;
+
+                            .input-field {
+                                display: inline-block;
+
+                                &:not(:last-child) {
+                                    margin-right: 32px;
+                                }
+                            }
+
+                            .month {
+                                width: 192px;
+                            }
+
+                            .day {
+                                width: 128px;
+                            }
+
+                            .year {
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+
+                .cert {
+                    .item-wrapper {
+                        width: 100%;
+
+                        label {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .action {
+
+                    &.submit {
+                        margin-top: 32px;
+                    }
+                }
+            }
+
+            &.step-2 {
+                .item-row {
+                    .item-wrapper {
+                        display: block;
+                    }
+                }
+            }
+
+            &.step-3 {
+                .item-row {
+                    fieldset legend {
+                        padding-bottom: 8px;
+                    }
+
+                    &.dob {
+                        .fields {
+                            #newChildDobDay, #newChildDobYear {
+                                width: 112px;
+                            }
+                        }
+                    }
+                }
+
+
+                .children {
+
+                    .new-child {
+                        .item-row {
+                            &.add-new .add-action {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .heading-1 {
+                    .optional-text {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

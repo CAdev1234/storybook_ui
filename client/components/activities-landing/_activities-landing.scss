@@ -1,0 +1,99 @@
+@import "../../styles/_mixins.scss";
+
+.card-container {
+  .card-item {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .video-play-button {
+    position: absolute;
+    z-index: 10;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: content-box;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #007c89;
+    border-radius: 50%;
+    &:hover {
+      background: #00636d;
+    }
+    &:active {
+      background: #01454d;
+    }
+    &:focus {
+    }
+
+    span {
+      display: block;
+      position: relative;
+      z-index: 3;
+      width: 0;
+      height: 0;
+      border-left: 15px solid #fff;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      left: 40%;
+      top: 30%;
+    }
+  }
+}
+
+.image-container {
+  &::after {
+    content: "";
+    display: block;
+    padding: 100px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 0.5);
+  }
+  &:hover::after {
+    display: none;
+  }
+}
+
+.video-modal {
+  .modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+  }
+
+  .modal-body {
+    position: relative;
+    padding: 0px;
+  }
+
+  .close {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    z-index: 999;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+@include respond-above(xs) {
+}
+
+@include respond-above(sm) {
+}
+
+@include respond-above(md) {
+}
+
+@include respond-above(xl) {
+  .video-modal {
+    .modal-dialog {
+      max-width: 1280px !important;
+      margin: 30px auto;
+    }
+  }
+}

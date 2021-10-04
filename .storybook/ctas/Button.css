@@ -1,0 +1,136 @@
+.storybook-button {
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: MuseoSans; */
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.storybook-button .btn-div {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* mode */
+.storybook-button--primary {
+    color: white;
+    background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+    border-radius: 32px;
+    border: solid 2px;
+}
+
+/* size */
+.storybook-button--small {
+    width: 120px;
+    height: 48px;
+    padding: 14px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+}
+.storybook-button--large {
+    width: 168px;
+    height: 64px;
+    padding: 20px 24px;
+    border-radius: 32px;
+    font-size: 16px;
+}
+
+/* light-dark */
+.storybook-button--dark {
+    background-color: rgba(0, 0, 0, 0.33);
+    border-color: white;
+    color: white;
+}
+.storybook-button--light {
+    background-color: #fff;
+    border-color: #007c89;
+    color: #007c89;
+}
+
+/* hover */
+.storybook-button--secondary.storybook-button--light:hover {
+    border-color: #005d67;
+    color: #005d67;
+}
+.storybook-button--secondary.storybook-button--dark:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* focus */
+.storybook-button--secondary.storybook-button--large.storybook-button--dark:focus {
+    width: 176px;
+    height: 72px;
+    padding: 4px;
+    border-radius: 36px;
+    background-color: #5e2750;
+}
+.storybook-button--secondary.storybook-button--large.storybook-button--dark:focus .btn-div {
+    width: 168px;
+    height: 64px;
+    border-radius: 32px;
+    border: 2px #fff solid;
+    background-color: transparent;
+}
+.storybook-button--secondary.storybook-button--small.storybook-button--dark:focus {
+    width: 128px;
+    height: 56px;
+    padding: 4px;
+    border-radius: 36px;
+    background-color: #5e2750;
+}
+.storybook-button--secondary.storybook-button--small.storybook-button--dark:focus .btn-div {
+    width: 120px;
+    height: 48px;
+    border-radius: 24px;
+    border: 2px #fff solid;
+    background-color: transparent;
+}
+.storybook-button--secondary.storybook-button--large.storybook-button--light:focus {
+    width: 176px;
+    height: 72px;
+    padding: 4px;
+    border-radius: 36px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.storybook-button--secondary.storybook-button--large.storybook-button--light:focus .btn-div {
+    width: 168px;
+    height: 64px;
+    border-radius: 32px;
+    border: 2px #007c89 solid;
+    background-color: transparent;
+}
+.storybook-button--secondary.storybook-button--small.storybook-button--light:focus {
+    width: 128px;
+    height: 56px;
+    padding: 4px;
+    border-radius: 36px;
+    box-sizing: border-box;
+}
+.storybook-button--secondary.storybook-button--small.storybook-button--light:focus .btn-div {
+    width: 120px;
+    height: 48px;
+    border-radius: 24px;
+    border: 2px #007c89 solid;
+    background-color: transparent;
+}
+
+/* active */
+.storybook-button--secondary.storybook-button--light:active {
+    border-color: #005d67;
+    color: #005d67;
+}
+.storybook-button--secondary.storybook-button--dark:active {
+    /* opacity: 0.5; */
+    background: rgba(0, green, 0, 50);
+}

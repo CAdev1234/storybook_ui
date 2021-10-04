@@ -1,0 +1,69 @@
+@import "../../styles/_mixins.scss";
+
+.forgot-cert-email-sent {
+    padding: 48px 20px;
+    border-bottom: 1px solid $border-1;
+
+    .info {
+        border: 1px solid $border-3;
+        border-bottom: 4px solid $feedback-info;
+        padding: 20px 16px;
+
+        .title {
+            &::before {
+                content: url("/content/membership/assets/icons-notifications-informational-medium-small.svg");
+                width: 16px;
+                height: 16px;
+                position: relative;
+                top: 5px;
+                right: 0;
+                display: inline-block;
+                padding-right: 36px;
+            }
+        }
+
+        .desc {
+            padding-left: 36px;
+        }
+    }
+
+    .heading-1 {
+        text-align: center;
+        padding: 54px 0;
+    }
+
+    .action {
+        text-align: center;
+        padding-bottom: 25px;
+
+        button {
+            width: 100%;
+        }
+
+        &.signin {
+            margin-top: 16px;
+
+            a.cta-text {
+                &::before {
+                    content: url("/content/membership/assets/icons-chevron-left-small.svg");
+                    width: 16px;
+                    height: 16px;
+                    position: relative;
+                    top: 3px;
+                    left: -3px;
+                    font-size: 20px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+@include respond-above(xs) {
+    .forgot-cert-email-sent {
+        width: 596px;
+        margin: 0 auto;
+        border-bottom: none;
+    }
+}

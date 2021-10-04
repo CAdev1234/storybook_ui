@@ -1,0 +1,259 @@
+﻿<main class="employee-register">
+
+    <!--Modal Popup for Registration Success-->
+    <div class="modal-success d-none">
+        <div class="backdrop"></div>
+        <div class="success-content">
+            <div class="icon-close"><button class="btn-close"></button></div>
+            <div class="title content"><img class="success-icon" src="/content/membership/assets/icons-notifications-success-medium-small.svg" /><p>Account is Successfully Created</p></div>
+            <div class="instr content">Lorem ipsum dolor sit amet, consectetur.</div>
+            <a href="#" class="signin-link content"><div class="signin">Continue to Sign In</div></a>
+        </div>
+    </div>
+
+
+    <div class="step-indicator">
+        <div class="wrapper">
+            <div class="line line-d-1"></div>
+            <div class="line line-d-2"></div>
+
+            <div class="step-header num-1">
+                <div class="step-number active">1</div><!--highlight the step indicator by applying class "active" and use "activated" class to show it is checked-->
+                <div class="header-text">Account Verification</div>
+            </div>
+            <div class="line line-1"></div>
+            <div class="step-header num-2">
+                <div class="step-number">2</div>
+                <div class="header-text">Consent</div>
+            </div>
+            <div class="line line-2"></div>
+            <div class="step-header num-3">
+                <div class="step-number">3</div>
+                <div class="header-text">Login Information</div>
+            </div>
+        </div>
+    </div>
+    <div class="step-content step-1 active">
+        <!--show the step content by applying class active-->
+        <form class="register-form" action="api/register" method="post">
+            <div class="info">
+                <div class="heading-1">Account Verification</div>
+                <div class="body-1">
+                    In order to become a member and access MyForesters.com,
+                    we need to verify you're a registered client of Foresters Financial. Please enter following information as it appears on your insurance certificate.
+                </div>
+                <div class="body-2-italic">All fields are required unless otherwise indicated.</div>
+            </div>
+            <div class="item-row error-wrapper no-error">
+                <!--removing no-error class will show this error section-->
+                <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+            </div>
+            <div class="item-row names">
+                <div class="item-wrapper">
+                    <label class="label-1" for="firstName">
+                        First Name
+                        <input type="text" class="input-field" id="firstName" required />
+                        <span class="error">Please enter your first name</span>
+                    </label>
+                </div>
+                <div class="item-wrapper">
+                    <label class="label-1" for="lastName">
+                        Last Name
+                        <input type="text" class="input-field" id="lastName" required />
+                        <span class="error">Please enter your last name</span>
+                    </label>
+                </div>
+            </div>
+            <div class="item-row dob">
+                <fieldset class="item-wrapper">
+                    <legend class="label-1">
+                        Date of Birth
+                    </legend>
+                    <div class="fields">
+                        <select id="month" class="input-field month" name="month" aria-label="Month" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <input id="day" class="input-field day" name="day" placeholder="Day" aria-label="Day" required min="1" max="31" type="number" />
+                        <input id="year" class="input-field year" name="year" placeholder="Year" aria-label="Year" required min="1900" max="2050" type="number" data-min-dob="18" data-min-dob-message="You must be 18 years old in order to register"/>
+                        <span class="error">Please enter a valid date</span>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="item-row cert">
+                <div class="item-wrapper">
+                    <div class="label-1">
+                        <label for="cert">
+                            Certificate/Plan Number
+                            <!--the following span tag is for tooltip indicator. data-tootip-content will have a value of a DIV id to hold 
+                                html content for tooltip. data-toggle="tooltip" is needed to mark this as tooltip component-->
+                            <span class="tooltip-icon" data-tooltip-content="#cert_tooltip_content" data-toggle="tooltip"></span>
+                            <input type="text" class="input-field" id="cert" required />
+                            <span class="error">Please enter a valid certificate number</span>
+                        </label>
+                        <!--the follwing is tooltip content for certificate section-->
+                        <div class="d-none" id="cert_tooltip_content">
+                            <div class="tooltip-content">
+                                <p>
+                                    Your Foresters certificate<sup>1</sup> number is always on the front page of your certificate. Double check your certificate number and try again. Please call the customer service center at 800 828 1540 if you continue to have difficulty.
+                                </p>
+                                <p style="font-size: smaller">
+                                    <sup>1</sup>Certificate means your certificate, rider policy or annuity issued by Foresters or its subsidiaries Foresters Life Insurance Company (formerly Unity Life of Canada) or Foresters Life Ltd.
+                                </p>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--use class d-none to show and hide country dropdown conditionally-->
+            <div class="item-row country">
+                <div class="item-wrapper">
+                    <label class="label-1">
+                        Country
+                        <select id="country" name="country" class="input-field select-country" required>
+                            <option value="" disabled selected>Select a country</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="ca">Canada</option>
+                            <option value="us">United States</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="item-row action submit">
+                <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                <button type="submit" class="button-primary" disabled>Verify my Account</button>
+            </div>
+            <div class="item-row action signin">
+                <a href="#" class="cta-text">Sign in Instead</a>
+            </div>
+        </form>
+    </div>
+    <div class="step-content step-2" data-selectedcountry="">
+        <form class="register-form consent-form" action="api/register" method="post">
+            <div class="info">
+                <div class="heading-1">Consent to use of personal information</div>
+            </div>
+            <div class="item-row">
+                <label class="check-container">
+                    <input type="checkbox" id="acceptConsent" name="acceptConsent" class="input-field" required>
+                    <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                    <span class="text">By clicking the applicable checkbox, you agree to provide your consent in accordance with one of the following statements below.</span>
+                </label>
+            </div>
+            <div class="item-row">
+                <div class="item-wrapper">
+                    <p>1. I am a Foresters employee but not a current Benefit Member*. I consent to my personal information (including name, date of birth, address and employee number) being used for the purposes of becoming a Community Member and for the purpose of accesing MyForesters and Foresters Go.</p>
+                    <p>2. I am a Foresters employee and also a Benefit Member*. I consent to my personal information (including name, date of birth, address and employee number) being used to link and share information from MyForesters Employee Account to Benefit Member Account including for the purpose of accessing Foresters Go.</p>
+                    <p>*You are a Benefit Member if you are insured under a life or health insurance certificate, or an annuitant under an annuity certificate, issued by The Independent Order of Foresters Life Insurance Company, or are a social fraternal member.</p>
+                </div>
+            </div>
+            <div class="item-row action submit">
+                <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                <button type="submit" class="button-primary" disabled>Submit</button>
+            </div>
+            <div class="item-row action signin">
+                <a href="#" class="cta-text">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <div class="step-content step-3">
+        <form class="register-form" action="api/employee-register" method="post">
+            <div class="info">
+                <div class="heading-1">Login Information</div>
+                <div class="body-2-italic">All fields are required unless otherwise indicated.</div>
+            </div>
+            <div class="item-row error-wrapper no-error">
+                <!--adding no-error style will hide this error section-->
+                <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+            </div>
+            <div class="item-row">
+                <div class="item-wrapper">
+                    <label class="label-1" for="username">
+                        User Name
+                        <input type="text" pattern="(?=.*[0-9])(?=.*[A-Z])^([a-zA-Z0-9]{6,15})$" class="input-field" id="username" required />
+                        <span class="error">Please enter your user name</span>
+                    </label>
+                    <div class="caption-text">6-15 characters and include at least one number, one capital letter and cannot contain special characters @, /, #, $, etc. </div>
+                </div>
+            </div>
+            <div class="item-row">
+                <div class="item-wrapper">
+                    <label class="label-1" for="password">
+                        Password
+                        <input type="password" id="registrationPassword" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}" placeholder="Enter Password" class="input-field" required />
+                        <span class="toggle-pwd">
+                            <span id="show" class="show">Show</span>
+                            <span id="hide" class="hide">Hide</span>
+                        </span>
+                        <span class="error">Please enter your password</span>
+                    </label>
+                    <div class="caption-text">8 - 14 characters, including at least one letter and one number. </div>
+                    <span id="password" class="caps-lock-message">WARNING! Caps lock is ON.</span>
+                </div>
+            </div>
+            <div class="item-row">
+                <div class="item-wrapper">
+                    <label class="label-1" for="confirmPassword">
+                        Confirm Password
+                        <input type="password" id="confirmPassword" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}" placeholder="Confirm Password" class="input-field" required />
+                        <span class="toggle-pwd">
+                            <span id="show" class="show">Show</span>
+                            <span id="hide" class="hide">Hide</span>
+                        </span>
+                        <span class="error">Please enter your confirm password</span>
+                        <span class="nomatch-error error d-none">Confirm password and new password must match</span>
+                        <span class="caps-lock-message">WARNING! Caps lock is ON.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="item-row radio">
+                <fieldset>
+                    <legend class="label-1">Preferred communication language</legend>
+
+                    <div class="item-wrapper">
+                        <label class="label-1 radio-container">
+                            <input type="radio" name="language" checked>
+                            <span class="checkmark"></span>
+                            <span class="text-2">English</span>
+                        </label>
+                    </div>
+                    <div class="item-wrapper">
+                        <label class="label-1 radio-container">
+                            <input type="radio" name="language">
+                            <span class="checkmark"></span>
+                            <span class="text-2">French</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="item-row">
+                <label class="check-container">
+                    <input type="checkbox" id="acceptTnC" name="acceptTnC" class="input-field" required>
+                    <span class="checkmark"><i class="check" aria-hidden="true"></i></span>
+                    <span class="text">I accept MyForesters <a href="/tnc">Terms of use</a></span>
+                    <span class="error">Terms and conditions must be accepted</span>
+                </label>
+            </div>
+            <div class="item-row action submit">
+                <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                <button type="submit" class="button-primary" disabled>Create account</button>
+            </div>
+            <div class="item-row action signin">
+                <a href="#" class="cta-text">Cancel</a>
+            </div>
+        </form>
+    </div>
+</main>

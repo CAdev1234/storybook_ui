@@ -1,0 +1,244 @@
+@import "../../styles/_mixins.scss";
+
+.forgot-cert {
+    display: block;
+    background-color: white;
+    padding: 48px 20px;
+
+    .forgot-cert-form {
+
+        .item-row {
+            padding: 16px 0;
+
+            .item-wrapper {
+                padding-top: 8px;
+                padding-bottom: 8px;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                .label-1 {
+                    display: block;
+
+                    .input-field {
+                        font-family: MuseoSans-300;
+                    }
+                }
+
+                .input-field {
+                    width: 100%;
+                }
+            }
+        }
+
+        .info {
+
+            .heading-1 {
+                padding-bottom: 16px;
+            }
+
+            .body-1 {
+                padding-bottom: 48px;
+            }
+        }
+
+        .names {
+            padding-top: 17px;
+
+            .item-wrapper {
+                vertical-align: top;
+            }
+        }
+
+        .dob {
+
+            .input-field {
+                margin: 8px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            legend.label-1 {
+                margin-bottom: 0;
+            }
+        }
+
+        .cert {
+
+
+            .option {
+                height: 24px;
+                display: inline-block;
+                padding-left: 16px;
+
+                &::before {
+                    content: url("/content/membership/assets/question.svg");
+                    width: 16px;
+                    height: 16px;
+                    position: relative;
+                    top: 3px;
+                    right: 0;
+                    display: inline-block;
+                }
+            }
+
+            .body-1-link {
+                padding-top: 8px;
+                display: block;
+                text-decoration: underline;
+            }
+        }
+
+        .email {
+
+            .caption-text {
+            }
+        }
+
+        .action {
+
+            &.submit {
+                margin-top: 26px;
+            }
+
+            &.signin {
+                margin-top: 16px;
+
+                a.cta-text {
+                    &::before {
+                        content: url("/content/membership/assets/icons-chevron-left-small.svg");
+                        width: 16px;
+                        height: 16px;
+                        position: relative;
+                        top: 3px;
+                        left: -3px;
+                        font-size: 20px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .button-primary, .cta-text {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+
+@include respond-above(xs) {
+    .forgot-cert {
+        width: 596px;
+        margin: 0 auto;
+
+        .forgot-cert-form {
+            .item-row {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .info {
+                padding-bottom: 16px;
+
+                .heading-1 {
+                    text-align: center;
+                }
+            }
+
+            .item-row {
+                padding: 16px 0;
+
+                .item-wrapper {
+                    display: inline-block;
+                    padding-top: 0;
+                    padding-bottom: 0;
+
+                    .input-field {
+                        display: inline-block;
+                    }
+                }
+
+                &.country-zip {
+                    .item-wrapper {
+                        vertical-align: top;
+                        width: 49%;
+                    }
+
+                    .country {
+                        padding-right: 16px;
+                    }
+
+                    .zip {
+                        padding-left: 16px;
+                    }
+                }
+
+                &.names {
+                    .item-wrapper {
+                        width: 192px;
+
+                        &:not(:last-child) {
+                            margin-right: 32px;
+                        }
+                    }
+                }
+
+                &.dob {
+                    fieldset {
+                        margin: 0;
+                    }
+
+                    .item-wrapper {
+                        width: 192px;
+
+                        legend {
+                        }
+
+                        .fields {
+                            width: 596px;
+
+                            .input-field {
+                                display: inline-block;
+
+                                &:not(:last-child) {
+                                    margin-right: 32px;
+                                }
+                            }
+
+                            .month {
+                                width: 192px;
+                            }
+
+                            .day {
+                                width: 128px;
+                            }
+
+                            .year {
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .action {
+
+                &.submit {
+                    margin-top: 32px;
+                }
+
+                &.signin {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}

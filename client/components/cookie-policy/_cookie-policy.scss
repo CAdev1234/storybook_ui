@@ -1,0 +1,90 @@
+@import "../../styles/_mixins.scss";
+
+.cookie-policy {
+    z-index: 1000;
+    background-color: rgba(37, 37, 37, 0.9);
+    color: white;
+    width: 100%;
+    padding: 24px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+    transform-origin: bottom;
+    transform: scaleY(1);
+
+    &.no-height {
+        transform: scaleY(0);
+    }
+
+    .content {
+        display: block;
+
+        p {
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            a.link {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+
+
+        .cta {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@include respond-above(xs) {
+    .cookie-policy {
+        padding: 24px 48px;
+
+        .content {
+            max-height: 160px;
+
+            p {
+                display: inline-block;
+                width: 66%;
+                margin-bottom: 0;
+                vertical-align: middle;
+            }
+
+            .cta {
+                display: inline-block;
+                width: 33%;
+                height: 64px;
+                margin-top: auto;
+                margin-bottom: auto;
+
+                button {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(sm) {
+    .cookie-policy {
+        padding: 24px 48px;
+
+    }
+}
+@include respond-above(md) {
+    .cookie-policy {
+        padding: 24px 96px;
+
+    }
+}
+@include respond-above(lg) {
+    .cookie-policy {
+        padding: 24px 160px;
+
+    }
+}

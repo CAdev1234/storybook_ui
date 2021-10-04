@@ -1,0 +1,111 @@
+﻿<div class="forgot-cert">
+    <form class="forgot-cert-form" action="api/recover-cert" method="post">
+            <div class="info">
+                <div class="heading-1">Can’t find your certificate number?</div>
+                <div class="body-1">
+                    We can help with that. Please enter the following recovery information to help us find your membership plan. You will receive an email with your certifiicate number.
+                </div>
+                <div class="body-2-italic">All fields are required unless otherwise indicated.</div>
+            </div>
+            <div class="item-row error-wrapper">
+                <!--adding no-error style will hide this error section-->
+                <div class="error-title-wrapper"><span class="warning-icon">!</span><span class="error-title text-500">Verification Error</span></div>
+                <div class="error-message">The information you entered seems to be incorrect. Please try again.</div>
+            </div>
+            <div class="item-row names">
+                <div class="item-wrapper">
+                    <label class="label-1">
+                        First Name
+                        <input type="text" class="input-field" required />
+                        <span class="error">Please enter your first name</span>
+                    </label>
+                </div>
+                <div class="item-wrapper">
+                    <label class="label-1">
+                        Last Name
+                        <input type="text" class="input-field" required />
+                        <span class="error">Please enter your last name</span>
+                    </label>
+                </div>
+            </div>
+            <div class="item-row dob">
+                <fieldset class="item-wrapper">
+                    <legend class="label-1">
+                        Date of Birth
+                    </legend>
+                    <div class="fields">
+                        <select id="month" class="input-field month" name="month" aria-label="Month" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <input id="day" class="input-field day" name="day" placeholder="Day" aria-label="Day" required min="1" max="31" type="number" />
+                        <input id="year" class="input-field year" name="year" placeholder="Year" aria-label="Year" required min="1900" max="2050" type="number" />
+                        <span class="error">Please enter a valid date</span>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="item-row country-zip">
+                <div class="item-wrapper country">
+                    <label class="label-1">
+                        Country
+                        <select class="input-field select-country">
+                            <option value="" disabled selected>Select a country</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="ca">Canada</option>
+                            <option value="us">United States</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="item-wrapper zip">
+                    <label class="label-1">
+                        ZIP/Postal code
+                        <input type="text" class="input-field" required />
+                        <span class="error">Please enter your zip/postal code</span>
+                    </label>
+                </div>
+            </div>
+            <div class="item-row pay-freq">
+                <div class="item-wrapper">
+                    <label class="label-1">
+                        Payment frequency
+                        <select class="input-field select-country">
+                            <option value="" disabled selected>Select frequency</option>
+                            <option value="week">weekly</option>
+                            <option value="month">Monthly</option>
+                            <option value="year">Yearly</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="item-row email">
+                <div class="item-wrapper">
+                    <label class="label-1" for="email">
+                        Email Address
+                        <input type="email" class="input-field" id="email" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}" required />
+                        <span class="error">Please enter a valid email address</span>
+                    </label>
+                    <div class="caption-text">
+                        Email address should match what we have on file. This email will be used to send this recovery email. Lorem ipsum dolor sit.
+                    </div>
+                </div>
+            </div>
+            <div class="item-row action submit">
+                <!--show the busy cursor with darker background color by applying class active when ajax is in progerss-->
+                <button type="submit" class="button-primary">Recover Certificate Number</button>
+            </div>
+            <div class="item-row action signin">
+                <a href="/login.html" class="cta-text">Back to Sign in</a>
+            </div>
+        </form>
+</div>
